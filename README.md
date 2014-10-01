@@ -1,4 +1,0 @@
-GitHubPerso
-===========
-
-Dépôt personnel 
