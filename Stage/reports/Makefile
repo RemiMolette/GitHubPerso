@@ -6,6 +6,8 @@ all: $(MAIN).pdf
 
 $(MAIN).pdf: $(SRCTEX)
 	rubber --pdf $(MAIN);
+	@rm -f *~ *.aux	*.log *.bbl *.vrb \
+	       *.toc *.nav *.out *.snm *.idx *.ilg *.ind	
 
 clean:
 	rubber --pdf --clean
