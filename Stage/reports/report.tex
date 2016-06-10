@@ -281,41 +281,44 @@ Dans ce mémoire, l'auteur se basera sur sa vision de la sécurité informatique
 
 \part{Etat de l'art \& aspect théorique}
 
+
 \chapter{Etat de l'art}%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 Dans cette partie, nous aborderons la question du ``Pourquoi'', en expliquant les origines de la sécurité informatique, les idées reçues sur cette discipline aussi nouvelle qu'incomprise et pourquoi elle est aujourd'hui estimé comme un aspect primordial, voir obligatoire, dans le développement d'une entreprise.
 
-\newpage
+\noindent Mais si nous devons parler de l'état actuelle de la sécurité informatique, il est important de parler de ses origines, nous nous interesseront donc dans un premier temps au développelement de l'informatique lui même en établissant un état de l'art. Pour cela, nous allons expliquer à travers différents moments clé de l'histoire qui ont permis la naissance et le développement de l'informatique tel que nous le connaissons aujourd'hui.\\
 
-Mais si nous devons parler de l'état actuelle de la sécurité informatique, il est important de parler de ses origines et d'établir un état de l'art. Pour cela, nous allons expliquer à travers différents moments clé de l'histoire qui ont permis la naissance et le développement de la sécurité informatique et de l'information.
+\textit{Développement chronologique à revoir, plus raconté}
+
 
 \section{Enigma}
 
-Impossible de parler de sécurité informatique sans parler de cette invention faites par des cryptographes polobais en 1918 : Enigma.
-A l'origine, ce dispositif electromécanique de cryptage par rotor fut inventé pour sécuriser les communications bancaires, mais l'armée allemande en trouve une utilité tout autres en s'en servant pour sécuriser ses communications durant la seconde guerre mondiale. Mais le plus important dans cette invention fut été la réponse faites par les alliées, avec l'aide d'Alan Turing\footnote{Mathématicien et cryptologue britannique né en 1912 et mort en 1954, auteur de travaux qui fondent scientifiquement l'informatique} avec la création de la machine Colossus\footnote{Premier calculateur électronique fondé sur le système binaire} pour briser les codes provenant d'Enignma. On accrédite d'ailleurs la fin de la guerre d'une année plus tôt à cette machine.
+Impossible de parler de sécurité informatique sans parler de cette invention faites par des cryptographes polobais en 1918 : Enigma \index{Enigma}.
+A l'origine, ce dispositif electromécanique de cryptage par rotor fut inventé pour sécuriser les communications bancaires, mais l'armée allemande en trouve une utilité tout autres en s'en servant pour sécuriser ses communications durant la seconde guerre mondiale. Mais le plus important dans cette invention fut été la réponse faites par les alliées, avec l'aide d'Alan Turing\index{Alain Turing}\footnote{Mathématicien et cryptologue britannique né en 1912 et mort en 1954, auteur de travaux qui fondent scientifiquement l'informatique} avec la création de la machine Colossus\index{Colossus}\footnote{Premier calculateur électronique fondé sur le système binaire} pour briser les codes provenant d'Enignma. On accrédite d'ailleurs la fin de la guerre d'une année plus tôt à cette machine.
 
 On voit donc à partir de cette date, l'apparition de ce que l'on pourrait appeler le premier ordinateur, ouvrant ainsi la porte à l'informatique moderne.
 
-\section{ARPANet}
+\section{Les années 60 \& ARPANet}
 
-On se place désormais dans les années 60 et sur le commencement de l'industrialisation des ordinateurs grand public. Mais cette période apporte son lot en matière d'avancement de la sécurité informatique mais aussi par son jargon. Et c'est en 1949 que des étudiants du MIT fondent le Tech Model Railroad Club afin d'obtenir l'accès a ce que l'on appelle aujourd'hui le premier ordinateur industrielle : le PDP-1. A travers leur club ils ont effet commencer à etudier, explorer et coder sur cette unité centrale et mettent aux jours 
+On se place désormais dans les années 60 et sur le commencement de l'industrialisation des ordinateurs grand public. Mais cette période apporte son lot en matière d'avancement de la sécurité informatique et nous allons comprendre pourquoi avec quelques faits historique marquant.\\
 
-    Les étudiants du Massachusetts Institute of Technology (MIT) fondent le Tech Model Railroad Club (TMRC) et commencent à explorer et programmer l'unité centrale PDP-1 du système informatique de l'école. Le groupe finit par utiliser le terme « hacker » (ou pirate) dans le contexte actuel que l'on connaît.
+Un des points important de l'évolution de l'informatique ce passe avec un groupe d'étudiants du MIT qui, vers 1959, fondent le Tech Model Railroad Club (TMRC) afin d'obtenir l'accès a ce que l'on appellera aujourd'hui le premier ordinateur industrielle : le PDP-1. A travers leur club ils commencèrent à etudier, explorer et coder sur cette unité centrale et mettent au point le premier jeu vidéo sur micro-ordinateur : Spacewar\index{Spaceware!}. Mais ce n'est pas le plus important fait relayé à ce club, en effet on lui attribura la naissance du terme ``hack'' et de tout ses dérivés, mais aussi tout un jargon qui fait maintenant partie du Jargon File\footnote{Glossaire spécialisé dans l'argot des programmeurs}.\\
 
-    Le Ministère de la Défense américaine (DoD) crée le réseau Advanced Research Projects Agency Network (ARPANet), qui acquiert de la popularité dans les milieux académiques et de recherche, comme un moyen d'échanger électroniquement des données et des informations. Ce dernier ouvre la voie vers la création d'un réseau porteur connu de nos jours sous le nom d'internet.
+Le fait le plus marquant dans l'évolution de l'informatique se passe en 1969 avec un projet mené le Ministère de la Défense américaine (DoD) : le réseau Advanced Research Projects Agency Network (ARPANet). Ce projet permetta de relier quatres université américaine à travers les États-unis grace à un concept de transfert de paquets, qui deviendra par la suite la base du transfert de données sur internet. L'intêret de cette avancé se situait sur le fait que les communications étaient basées sur la communication par circuits électronique, telle que celle utilisée par le réseau téléphone, où un circuit dédié est activé lors de la communication avec le poste du réseau. Mais avec le réseau développé par la DARPA, on met en avant une communication plus robuste et capable d'être établi sur de plus grande distance. Il a été en effet développé dans le but de continuer à fonctionner malgré une attaque nucléaire massive de la part de l'Union soviétique (contexte de la guerre froide) et permettant à un paquet émis d'adapater son chemin en fonction de l'état du réseau (changement de noeud, etc).
 
-    Ken Thompson développe alors le système d'exploitation UNIX, considéré par beaucoup comme étant le système d'exploitation le plus « susceptible d'être piraté » en raison d'une part, de ses outils pour développeurs et de ses compilateurs très accessibles et d'autre part, de son soutien parmi la communauté des utilisateurs. À peu près à la même époque, Dennis Ritchie met au point le langage de programmation C, indiscutablement le langage de piratage le plus populaire de toute l'histoire informatique.
+Enfin, on ne peut parler des années 60 sans parler du développement d'UNIX par Ken Thompson, considéré par beaucoup comme étant le système d'exploitation le plus « susceptible d'être piraté » en raison d'une part, de ses outils pour développeurs et de ses compilateurs très accessibles et d'autre part, de son soutien parmi la communauté des utilisateurs. À peu près à la même époque, Dennis Ritchie met au point le langage de programmation C, indiscutablement le langage de piratage le plus populaire de toute l'histoire informatique.\\
+
+On peut donc penser que cet époque apporte son lot d'évènement majeur dans le développement de l'informatique, de part le jargon mise en place et très largement utilisé des nos jours, mais aussi par l'environnement UNIX qui a vu le jours et le langage de programmation le plus utilisé aujourd'hui. Mais le plus gros impact de cette décénie reste la mise en place du réseau ARAPNet, ancètre de l'internet, mais qui se positionne comme étant un moyen d'échanger des données sur un réseau et ce, sans se préocupper de la distance. Il restera cepandant limité aux universités et professionnel dans ses premières versions.
 
 \section{Les années 70}
 
-Protocole Telnet par Bolt, Beranek et Newman.
-Ouverture grand public > autrefois fermé aux entreprise
-
-Steje Jobs et Wozniak : Apple Computer > accès grand public a du matériel de hacking
-
-Jim Ellis et Tom Truscott : USENET (forum)
+Les années 70 quant à elles, sont importante pour la démocratisation de l'informatique pour le grand public en palliant aux problème d'accès au réseau de donnée ARPANet. En effet, la société Bolt, Beranek et Newman, met au point le protocole de communication Telnet\footnote{TErminal NETwork ou TELecommunication NETwork, ou encore TELetype NETwork} comme étant une extension publique du réseau ARPANet, cassant ainsi le privilège des entrepreneurs et des chercheurs du monde académique quant à son accès. Ce protocole ouvre donc la voie à l'utilisation du réseau de donnée pour le grand public. Mais cepandant, l'accès au matériel informatique nécessaire pour l'accès au réseau reste compliqué. Et c'est sur ce point que Steve Jobs et Steve Wozniak créent Apple Computer et mettent au point et commercialisent l'ordinateur personnel ou PC (de l'anglais Personal Computer). Le PC devient alors un accélérateur dans l'apprentiissage par des utilisateurs malintentionnés de l'art de s'introduire dans des systèmes à distance en utilisant du matériel de communication de PC courant que des modems analogues ou des logiciels dédies (war dielers). Comme la sécurité telle que nous la connaissons actuellement n'existait pas, il était d'autant plus facile de trouver et d'exploiter des vulnérabilités sur les sytèmes informatiques.\\
+C'est dans cette période là que la nécéssite de sécurité informatique commence à se faire désirer, puisque l'accès à l'information commence à être de plus en plus facile et de plus en plus dangereuse étant donné que les standards de contrôle ne sont pas encore mis en place.
 
 \section{Année 80}
+
+
+
 
 IBM et Intel 8086 > utilisation personnel
 Protocol TCP
@@ -324,12 +327,21 @@ Legion of Doom et Chaos Computer Club sont deux groupes pionniers en matière de
 \section{Année 90}
 
 Fin de l'ARPANet et création du WWW
+La navigateur Web graphique voit le jour et engendre une croissance exponentielle de la demande pour l'accès public à l'interne
+Le ministre de la justice américaine, Attorney General Janet Reno, en réponse au nombre croissant des brèches de sécurité dans les systèmes du gouvernement fonde le centre de protection de l'infrastructure nationale (ou National Infrastructure Protection Center, NIPC). 
 
- 
+\section{De nos jours}
+
+Tous les jours, environ 225 cas majeurs de brèches de sécurité sont rapportés au Centre de Coordination du CERT à l'université de Carnegie Mellon
+En 2003, le nombre d'infractions rapporté au CERT est monté à 137.529, par rapport à 82.094 en 2002 et par rapport à 52.658 en 2001
+L'impact économique au niveau mondial des trois virus Internet les plus dangereux ayant surgi au cours des trois dernières années a atteint un montant total de US$13,2 milliards\\
+
+La sécurité informatique fait désormais partie des dépenses non seulement quantifiables, mais justifiables incluses dans tout budget IT. Les sociétés nécessitant de l'intégrité et la haute disponibilité de données recourent aux capacités des administrateurs système, développeurs et ingénieurs pour assurer la fiabilité de leurs systèmes, services et informations 24 heures sur 24, 7 jours sur 7. La possibilité de devenir la victime d'attaques coordonnées, d'utilisateurs ou de processus malveillants représente une véritable menace au succès d'une société. 
 
 \chapter{Aspect théorique}
 
-A revoir, pas tès clair, partie utile ?
+Qu'est ce que l'on doit sécurisé ? Trop de sécurité tue la sécurité -> trop emcombrant pour l'utilisateur
+L'user va chercher à bypass les systèmes
 
 Sécurisation des systèmes critiques
 Sécurisation en fonction de ce qui existe 
