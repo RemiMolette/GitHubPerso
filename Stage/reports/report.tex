@@ -339,17 +339,18 @@ Commençons avec le fait plus marquant de cette période avec la décomission de
 
 \section{De nos jours}
 
-Entre les années 1990 et 2000, le nombres d'ordinateurs est passé d'un million à plus de 370 millions, la barre du milliard de sites web a même été franchie en 2014.
-Cependant, avec toutes cette activité, le nombre d'incident augmente et tous les jours, environ 225 cas majeurs de brèches de sécurité sont rapportés au Centre de Coordination du CERT à l'université de Carnegie Mellon
+Entre les années 1990 et 2000, le nombres d'ordinateurs est passé d'un million à plus de 370 millions, la barre du milliard de sites web a même été franchie en 2014. L'accès à l'informatique et internet s'est vu banaliser, au même titre que l'accès à du contenu de nature contreversé, comme avec des ressources sur le darknet\footnote{Réseau privé virtuel anonymisé} ou les forums de discussions décentralisés.
+Cependant, avec toutes cette activité, le nombre d'incident augmente et tous les jours, environ 225 cas majeurs de brèches de sécurité sont rapportés au Centre de Coordination du CERT à l'université de Carnegie Mellon.
 En 2003, le nombre d'infractions rapporté au CERT est monté à 137.529, par rapport à 82.094 en 2002 et par rapport à 52.658 en 2001
 L'impact économique au niveau mondial des trois virus Internet les plus dangereux ayant surgi au cours des trois dernières années a atteint un montant total de US\$13,2 milliards\\
 
-On voit donc bien avec ce développelement historique de l'informatique et de ses besoins en matière de sécurité informatique, nottament pour les industries, pour qui la sécurité informatique fait désormais partie des dépenses non seulement quantifiables, mais justifiables incluses dans tout budget. Les sociétés nécessitant de l'intégrité et la haute disponibilité de données recourent aux capacités des administrateurs système, développeurs et ingénieurs pour assurer la fiabilité de leurs systèmes, services et informations 24 heures sur 24, 7 jours sur 7. La possibilité de devenir la victime d'attaques coordonnées, d'utilisateurs ou de processus malveillants représente une véritable menace au succès d'une société. 
+On voit donc bien avec ce développelement historique de l'informatique et de ses besoins en matière de sécurité informatique, nottament pour les industries, pour qui la sécurité fait désormais partie des dépenses non seulement quantifiables, mais justifiables incluses dans tout budget. Les sociétés nécessitant de l'intégrité et la haute disponibilité de données recourent aux capacités des administrateurs système, développeurs et ingénieurs pour assurer la fiabilité de leurs systèmes, services et informations 24 heures sur 24, 7 jours sur 7. La possibilité de devenir la victime d'attaques coordonnées, d'utilisateurs ou de processus malveillants représente une véritable menace au succès d'une société. 
 
 \chapter{Aspect théorique}
 
+
 La sécurité de l'information et de la sécurité informatique en général est soumise à des contraintes particulière car elle s'appuie essentiellement sur la bonne coopération de l'utilisateur. Car de nos jours, 90\% des problèmes de sécurité informatique sont dût à une négligeance humaine.\\
-La question légitime qu'il serait bon de se poser serait de savoir ce que l'on doit sécurisé, à laquelle on pourrait répondre ``tout''. Mais la sur-sécurisation reste un problème dans le sens où elle est beaucoup trop compliqué à mettre en place de part la compléxité de la tâche et la bienveillance de l'utilisateur. 
+La question légitime qu'il serait bon de se poser serait de savoir ce que l'on doit sécurisé, à laquelle on pourrait répondre ``tout''. Mais la sur-sécurisation reste un problème dans le sens où elle est beaucoup trop compliqué à mettre en place de part la compléxité de la tâche, l'intrusivité et la bienveillance de l'utilisateur. Car la sécurité informatique n'est pas réservé à une élite formaté dans le domaine, elle passe avant tout par l'utilisateur.
 
 Qu'est ce que l'on doit sécurisé ? Trop de sécurité tue la sécurité -> trop emcombrant pour l'utilisateur\\
 L'user va chercher à bypass les systèmes\\
@@ -360,10 +361,34 @@ Sécurisation en fonction de ce qui existe\\
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \part{Situation}
 
-Qu'est ce que l'on fait maintenant
+La sécurité informatique est aujourd'hui quelque chose de très important dans le développement d'une entreprise, comme nous l'avons vu dans la partie précédente. Nous allons voir dans cette partie ce qu'il éxiste en terme d'outils et de prestation dans le monde de la sécurité informatique, en se penchant d'avantage sur la mise en oeuvre de test d'intrusion (ou pentest) et sa valeur vis à vis d'un audit de sécurité standard. Nous ferons le lien entre la partie précédente pour voir et constater si l'on est ou pas en mesure de répondre aux menaces en matière d'informatique. Nous verrons aussi par la suite tout ce qui touche au cadre légale et juridique, car, les différentes forme de sécurité (offensive\footnote{Pentest} et défensive{Audit technique}) doit être cadré pour ne pas nuir à l'audité, ce qui serait contre-productif. On verra également la valeur ajouté des certifications et des normes ISO qui fleurissent actullement et leurs effets sur les prestations que les entreprises peuvent proposer et pourquoi elles deviennent de plus en plus nécessaire. 
 
 \chapter{En terme de technique}
 
+En terme de technique, nous allons voir ce qu'il existe en terme d'outillage pour réaliser les audits techniques (et tous ses variantes) et les tests d'intrusions, mais aussi la méthodologie qui y est liée. 
+
+\section{Audit de sécurité}
+
+L'audit de sécurité d'un système d'information (SI) est une vue à un instant T de tout ou partie du SI, permettant de comparer l'état du SI à un référentiel.
+
+L'audit répertorie les points forts, et surtout les points faibles (vulnérabilités) de tout ou partie du système. L'auditeur dresse également une série de recommandations pour supprimer les vulnérabilités découvertes. L'audit est généralement réalisé conjointement à une analyse de risques, et par rapport au référentiel. Le référentiel est généralement constitué de :
+
+
+    la politique de sécurité du système d'information (PSSI)
+    la base documentaire du SI
+    réglementations propre à l'entreprise
+    textes de loi
+    documents de référence dans le domaine de la sécurité informatique
+
+
+
+ \section{Pentest}
+
+    Les tests d'intrusion sont une pratique d'audit technique. On peut diviser les tests d'intrusion en trois catégories principales : les tests boîte blanche, les tests boîte grise et les tests dits boîte noire.
+
+\section{Limitation - lien avec le juridique}
+
+  
 Routine
 rapport
 conseil
