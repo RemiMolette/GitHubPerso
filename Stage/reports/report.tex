@@ -350,16 +350,10 @@ On voit donc bien avec ce développement historique de l'informatique et de ses 
  
 
 La sécurité de l'information et de la sécurité informatique en général est soumise à des contraintes particulière car elle s'appuie essentiellement sur la bonne coopération de l'utilisateur. Car de nos jours, 90\% des problèmes de sécurité informatique sont dût à une négligeance humaine.\\
-La question légitime qu'il serait bon de se poser serait de savoir ce que l'on doit sécurisé, à laquelle on pourrait répondre ``tout''. Mais la sur-sécurisation reste un problème dans le sens où elle est beaucoup trop compliqué à mettre en place de part la compléxité de la tâche, l'intrusivité et la bienveillance de l'utilisateur. Car la sécurité informatique n'est pas réservé à une élite formaté dans le domaine, elle passe avant tout par l'utilisateur.
+La question légitime qu'il serait bon de se poser serait de savoir ce que l'on doit sécurisé, à laquelle on pourrait répondre ``tout''. Mais la sur-sécurisation reste un problème dans le sens où elle est beaucoup trop compliqué à mettre en place de part la compléxité de la tâche, l'intrusivité et la bienveillance de l'utilisateur. Car la sécurité informatique n'est pas réservé à une élite formaté dans le domaine, elle passe avant tout par l'utilisateur.\\
+De nos jours, la mise en place de sécurité informatique passe par un raisonnement et un travail sur l'utilisateur, et ce afin qu'elle soit le plus efficace possible. Ele ne doit pas être trop intrusive (pop-up, demande d'authorisation, etc), trop envahissante ou trop compliqué pour que son utilisation soit la plus intuitive possible et faire en sorte qu'elle soit naturelle par l'utilisateur.\\
 
-
-Qu'est ce que l'on doit sécurisé ? Trop de sécurité tue la sécurité -> trop emcombrant pour l'utilisateur\\
-L'user va chercher à bypass les systèmes\\
-Sécurisation des systèmes critiques\\
-Sécurisation en fonction de ce qui existe\\ 
-    
 Un autre problème est qu'avant les années 2000, la sécurisation par le risque était très peu mise en oeuvre : on sécurisait les endroits où l'on était attaqué. On pourrait appeler ca une sécurisation par "le dégat", étant donné que l'attaque a déjà eu lieu.
-
 On y oppose la sécurisation par le risque en effectuant des analyses de risques, et en sécurisant les éléments essentiels, les "organes vitaux" du système.
 
 Nous allons donc voir dans la partie suivante ce dont on dispose pour réaliser la mise en place de toute la sécurité informatique, des outils mais aussi des méthodologies à notre disposition pour être actif et efficient.
@@ -373,29 +367,61 @@ La sécurité informatique est aujourd'hui quelque chose de très important dans
 
 \chapter{En terme de technique}
 
-En terme de technique, nous allons voir ce qu'il existe en terme d'outillage pour réaliser les audits techniques (et tous ses variantes) et les tests d'intrusions, mais aussi la méthodologie qui y est liée. Mais commençons par distinguer tests d'intrusion et audit de sécurité, car il s'agit de deux notions qui peuvent paraître similaires au premier abord mais dont les cadres respectifs ne correspondent pas forcément.
+En terme de technique, nous allons voir ce qu'il existe en terme d'outillage pour réaliser les audits techniques (et tous ses variantes) et plus particulièrement les tests d'intrusions, mais aussi la méthodologie qui y est liée. Mais commençons par distinguer tests d'intrusion et audit de sécurité, car il s'agit de deux notions qui peuvent paraître similaires au premier abord mais dont les cadres respectifs ne correspondent pas forcément.
 Un audit de sécurité est plus large qu'un test d'intrusion, lors d'un audit de sécurité, nous allons vérifier la sécurité organisationelle, le PRA/PCA (Plan de Reprise et Plan de Continuité d'Activité), DLP (Data Loss Prevention), la conformité par rapport aux exigences d'une norme (exemple : PCI DSS) ou un référentiel, et également procéder à un audit des configurations, audit de code, et enfin effectuer une analyse des risques (EBIOS, MEHARI, MARION).
 
+L’audit de sécurité s’effectue en plusieurs phases, dont le test d’intrusion. Parmi les autres phases, on peut donc trouver la correspondance orale avec les membres du SI\footnote{Système d'Information}, DSI\footnote{Directeur des Systèmes d'Information}, RSSI\footnote{Responsable de la sécurité des systèmes d'information} et membres de l’équipe technique, l’audit de configuration des services, serveurs, composants réseaux, etc., également l’audit de code pour les applications utilisées, déployées, voir développées en interne par l’entreprise cliente.
 
+Parmi les référentiels souvent utilisés pour l’audit de sécurité, on retrouve la norme ISO 27 000 / ISO 27 001, le référentiel général de sécurité de l’ANSSI, le référentiel COBIT et dans d’autres contextes, les normes de type SOX, PCI-DSS, etc. Nous verrons cela plus précisément dans une partie dédiée plus loin.
 
 
 \section{Audit de sécurité}
 
-L'audit de sécurité d'un système d'information (SI) est une vue à un instant T de tout ou partie du SI, permettant de comparer l'état du SI à un référentiel.
+Nous allons donc parler plus précisement de l'Audit de sécurité dans cette partie. L'audit de sécurité d'un système d'information (SI) est une vue à un instant T de tout ou partie du SI, permettant de comparer l'état du SI à un référentiel.
 
-L'audit répertorie les points forts, et surtout les points faibles (vulnérabilités) de tout ou partie du système. L'auditeur dresse également une série de recommandations pour supprimer les vulnérabilités découvertes. L'audit est généralement réalisé conjointement à une analyse de risques, et par rapport au référentiel. Le référentiel est généralement constitué de :
+L'objectif d'un audit de sécurité est de recenser les points forts mais aussi les points faibles (ou vulnérabilités) du système audité. A la suite de ce recensemment, l'auditeur dresse une séie de recommandations pour résoudre les points fabiles trouvés. On réalise conjoitement une analyse de risque afin de rendre l'audit le plus complet possible.
+L'audit se déroule en fonction d'un référentiel, dont voici les principaux points :
 
 \begin{itemize}
-    \item la politique de sécurité du système d'information (PSSI)
-    \item la base documentaire du SI
-    \item réglementations propre à l'entreprise
-    \item textes de loi
-    \item documents de référence dans le domaine de la sécurité informatique
+  \item La politique de sécurité du système d'information (PSSI) : Il s'agit d'un plan d'action afin de maintenir un niveau de sécurité donné.
+  \item La base documentaire du SI.
+  \item La réglementations propre à l'entreprise, comme notamment la nécessite de chiffrer les périphériques de stockage.
+  \item Les textes de loi.
+    \item Les documents de référence dans le domane de la sécurité informatique.
 \end{itemize}
 
+Nous avons vu dans la partie précédente ce qui nosu avait ammené à repenser notre façon de sécuriser nos systèmes d'informations et la mise en place d'audit de sécurité peut être une méthode pour prévenir des risques. Ce couteau suisse de la sécurité informatique peut être utlisé pour différent aspect :
+
+\begin{itemize}
+\item Réagir à une attaque, en analysant le vecteur d'attaque, la cible, etc.
+\item Se faire une idée de ce que l'auditeur possède en terme de sécurité.
+\item Tester la mise en place effective de la politique de sécurité du système d'information.
+\item Ter un nouvel équipement et son intégration dans le réseau de l'audité.
+\item Evaluer l'évolution de la sécurité, mais cela implique la réalisation d'audit périodique.
+\end{itemize}
+
+Mans dans tout les cas, il a pour but de vérifier la sécurité et pour cela, il fournit en résultat un rapport d'audit. Celui-ci est constitué de la liste exhaustive des vulnérabilités recensées par l'auditeur sur le système analysé. Il contient également une liste de recommandations permettant de supprier les vulnérabilités trouvées.
+
+Nous allons voir les différentes pratiques qui existent et qui sont généralement utilisées pour arriver à produire un audit de sécurité :
+
+\begin{itemize}
+  \item Interviews : Les interviews sont réalisées sur toutes les personnes ayant un rôle dans la mise en place ou l'utilisation de la sécurité informatique sur SI.
+On y retrouve généralement le DSI, le ou les RSSI, les différents administrateurs, les utilisateurs du système d'informations peut importe leur rôle dans l'entreprise, ainsi que tout autre rôle ayant un lien avec la sécurité.\\
+Un des aspects importants sur le rôle de l'auditeur lors des interviews est faire preuve de diplomatie afin de pas faire sentir à l'audité le moindre jugement du fait qu'il est interrogé sur son travail, ce qui pourrait fausser les résultats et rendre l'audit moins pertinant.
+
+\item Test d'intrusion : Les tests d'intrusions sont une partie importante des audits techniques. Ils permettent de vérifier un système de sécurité d'une manière très perspicasse puisque que l'auditeur se positionne en tant qu'un pirate afin de vérifier le plus précisement possible l'état de la sécurité informatique du système d'information.\\
+  Mais tout ceci sera expliqué dans une partie dédié aux tests d'intrusions, du fait qu'il y ai eu une plus grande activité dessus lors du stage.
+
+\item Relevé de configuration : Dans cette partie, il s'agit d'analyser, le plus pertinnament possible, les composants du système d'information. On se focalisera tout particulièrement sur les configurations utilisées. A la suite de cette observation, la liste des vulnérabilités est dégagée en comparant le relé à des cinfigurations réputées sécurisées et à des ensembles de failles connues.
+
+  \item Audit de code : 
+
+\end{itemize}
+
+  
 \section{Pentest}
 
-\textit{Cette partie se verra être plus détaillé techniquement, étant l'activité sur laquelle l'auteur s'est concentré sur le stage. Elle utilisera des données appartenant à la société et par conséquent confidentielle. Il sera fait ici une explication des outils et méthodes utilisées pour expliquer le Pentest.}\\
+\textit{Cette partie se verra être plus détaillé techniquement, étant l'activité sur laquelle l'auteur s'est concentré sur le stage. Elle utilisera des données appartenant à la société et par conséquent confidentielle. Il sera fait ici une explication des outils et méthodes utilisées pour expliquer le test d'intrusion, ou pentest.}\\
 
 Les tests d'intrusion sont une pratique d'audit technique. On peut diviser les tests d'intrusion en trois catégories principales : les tests boîte blanche, les tests boîte grise et les tests dits boîte noire. Leur différenciation se situe dans les informations dont on dispose au départ du pentest. Les pentests dit "en boîte noire" se déroulent sans informations de différentes nature qu'elles soient (Identifiants, informations de réseaux, de nom, etc). Pour les tests en "boîte blanche", là on dispose de toute les informations nécessaire à la réalisation du test. Cela peut aller du jeu d'identifiant, jusqu'au plan du réseau ou encore la liste des employés. Tout informations peut être exploité.\\
 \noindent Le test en ``boite grise'' quant à lui est un mélange entre les deux précédents. Lors de la réalisation de ces tests, l'auditeur dispose de quelques informations concernant le système audité. En général, on lui fournit un compte utilisateur. Ceci lui permet de se placer dans la peau d'un "utilisateur normal". 
@@ -406,13 +432,13 @@ Nous allons parler dans un premier temps des nuances entre les différents type 
 
 \subsection{Boîte noire, dans la peau d'un pirate}
 
-Dans le contexte Boîte noir (ou Black Box), le pentester se met réellement dans la peau d’un attaquant externe et commence son test d’intrusion en ayant le moins d’information possible sur sa cible (sa cible étant alors l’entreprise ayant demandé un pentest). En effet, lorsqu’un asseyant débute son attaque, il ne dispose pas (ou rarement) de la cartographie complète du SI, de la liste des serveurs avec leurs IP, etc. Le contexte Black Box vise donc à trouver et à démontrer la présence d’un plan d’action exploitable par une personne externe permettant de prendre le contrôle du système d’information ou de mettre la main sur certaines informations. En commençant avec très peu d’informations, le pentester doit chercher depuis l’extérieur comment s’introduire dans le système cible, il adopte alors la méthodologie et le comportement qu’aurait un pirate réel.
+Dans le contexte Boîte noir (ou Black Box), le pentester se met réellement dans la peau d’un attaquant externe et commence son test d’intrusion en ayant le moins d’information possible sur sa cible (sa cible étant alors l’entreprise ayant demandé un pentest). En effet, lorsqu’un asseyant débute son attaque, il ne dispose pas (ou rarement) de la cartographie complète du SI, de la liste des serveurs avec leurs IP, etc. Le contexte Black Box vise donc à trouver et à démontrer la présence d’un plan d’action exploitable par une personne externe permettant de prendre le contrôle du système d’information ou de mettre la main sur certaines informations. En commençant avec très peu d’informations, le pentester doit chercher depuis l’extérieur comment s’introduire dans le système cible, il adopte alors la méthodologie et le comportement qu’aurait un pirate réel. 
 
-
+Dans cette configuration là, le pentester va d'abord opérer ce que l'on appelle une reconnaissance de la victime via un procédé de ``social engineering'', afin de récuperer un maximum d'information sur la victime.  
 
 \subsection{Boîte blanche, dans la peau d'un technicien}
 
- Ici, c’est exactement l’inverse. Le pentesteur travail en proche collaboration avec le DSI, le RSSI et l’équipe technique du système d’information. Le but est alors d’obtenir 100\% des informations sur le système d’information et d’accompagner la DSI/RSSI dans la détection de vulnérabilité. Un des avantages du mode Boîte blanche (ou White Box) est que l’on peut alors détecter des failles de sécurité de façon plus large et que le mode Black Box n’aurait pas permis de déceler, car en se trouvant à l'intérieur du réseau à tester, le testeur aura plus de facilité à trouver ces failles car il connaît non seulement le système, mais il peut avoir accès directement aux ressources dont il a besoin. De plus, le mode White Box s’intègre plus facilement dans le cycle de vie du SI, parfois à chaque stade de son évolution.
+ Ici, c’est exactement l’inverse. Le pentesteur travail en proche collaboration avec le DSI, le RSSI et l’équipe technique du système d’information. Le but est alors d’obtenir 100\% des informations sur le système d’information et d’accompagner la DSI/RSSI dans la détection de vulnérabilité. Un des avantages du mode Boîte blanche (ou White Box) est que l’on peut alors détecter des failles de sécurité de façon plus large et que le mode Black Box n’aurait pas permis de déceler, car en se trouvant à l'intérieur du réseau à tester, le testeur aura plus de facilité à trouver ces failles car il connaît non seulement le système, mais il peut avoir accès directement aux ressources dont il a besoin. De plus, le mode White Box s’intègre plus facilement dans le cycle de vie du SI, parfois à chaque stade de son évolution. 
 
 Le testeur peut être en possession de nombreuses informations. Parmi elles, les plus courantes sont :
 
@@ -431,42 +457,16 @@ En général, lors de tests d'intrusion en mode boîte grise, le testeur dispose
 L'objectif de ce type de test est d'évaluer le niveau de sécurité vis-à-vis d'un "utilisateur normal".
 
 
-
-\subsection{Activité personnel}
-
-Début de mon apprentissage\\
-Respecter l'intégrité de l'infrastructure\\
-
-refaire l'integration avec Pierrick\\
-tilisation information pentest passé ?\\
-
 \section{Limitation - lien avec le juridique}
 
+\textbf{TRANSITION}
 Parmi les référentiels souvent utilisés pour l’audit de sécurité, on retrouve la norme ISO 27 000 / ISO 27 001, le référentiel général de sécurité de l’ANSSI, le référentiel COBIT et dans d’autres contextes, les normes de type SOX, PCI-DSS, etc.
 
 Certification à revoir\\
 
   
-Routine\\
-rapport\\
-conseil\\
-
-Différence entre audit et pentest\\
-
-Audit : Conforme (mais vulnérable ?)
-différente forme d'audit
-
-
-Pentest : On casse tout
 Différent outils à disposition
 (scanneur, automatisation de rapport, travail à la mano)
-
-\chapter{En terme juridique}
-
-Certif, iso
-Audit
-Pentest
-Encadrement -> scope
 
 \chapter{Constat, ce qu'il faut modifier, pour faire le lien avec la partie d'après}
 
