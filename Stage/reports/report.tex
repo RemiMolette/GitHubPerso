@@ -350,11 +350,11 @@ On voit donc bien avec ce développement historique de l'informatique et de ses 
  
 
 La sécurité de l'information et de la sécurité informatique en général est soumise à des contraintes particulière car elle s'appuie essentiellement sur la bonne coopération de l'utilisateur. Car de nos jours, 90\% des problèmes de sécurité informatique sont dût à une négligeance humaine.\\
-La question légitime qu'il serait bon de se poser serait de savoir ce que l'on doit sécurisé, à laquelle on pourrait répondre ``tout''. Mais la sur-sécurisation reste un problème dans le sens où elle est beaucoup trop compliqué à mettre en place de part la compléxité de la tâche, l'intrusivité et la bienveillance de l'utilisateur. Car la sécurité informatique n'est pas réservé à une élite formaté dans le domaine, elle passe avant tout par l'utilisateur.\\
-De nos jours, la mise en place de sécurité informatique passe par un raisonnement et un travail sur l'utilisateur, et ce afin qu'elle soit le plus efficace possible. Ele ne doit pas être trop intrusive (pop-up, demande d'authorisation, etc), trop envahissante ou trop compliqué pour que son utilisation soit la plus intuitive possible et faire en sorte qu'elle soit naturelle par l'utilisateur.\\
+La question légitime qu'il serait bon de se poser serait de savoir ce que l'on doit sécurisé. Ce à quoi on pourrait répondre ``tout''. Mais la sur-sécurisation reste un problème dans le sens où elle est beaucoup trop compliqué à mettre en place de part la multitude d'information disponible, la compléxité de la tâche et de la mise en place, l'intrusivité et la bienveillance de l'utilisateur. Car la sécurité informatique n'est pas réservé à une élite formaté dans le domaine, elle passe avant tout par l'utilisateur lambda.\\
+De nos jours, la mise en place de sécurité informatique passe par un raisonnement et un travail sur l'utilisateur et ce afin qu'elle soit le plus efficace possible. Ele ne doit pas être trop intrusive (pop-up, demande d'authorisation, UAC\footnote{User Access Control de Miscrosoft}, etc), trop envahissante ou trop compliqué pour que son utilisation soit la plus intuitive possible et faire en sorte qu'elle soit naturelle par l'utilisateur.\\
 
 Un autre problème est qu'avant les années 2000, la sécurisation par le risque était très peu mise en oeuvre : on sécurisait les endroits où l'on était attaqué. On pourrait appeler ca une sécurisation par "le dégat", étant donné que l'attaque a déjà eu lieu.
-On y oppose la sécurisation par le risque en effectuant des analyses de risques, et en sécurisant les éléments essentiels, les "organes vitaux" du système.
+On y oppose à cette forme de sécurisation, la sécurisation par le risque. Elle s'effectue par la réalisation des analyses de risques et en sécurisant les éléments essentiels, les "organes vitaux" du système.
 
 Nous allons donc voir dans la partie suivante ce dont on dispose pour réaliser la mise en place de toute la sécurité informatique, des outils mais aussi des méthodologies à notre disposition pour être actif et efficient.
 
@@ -419,28 +419,27 @@ Un des aspects importants sur le rôle de l'auditeur lors des interviews est fai
 \item \textbf{Audit de code} : Lors d'un audit de code, le but est de comprendre le code source, pour en analyser la sécurité et déceler les eventuels problèmes qui peuvent exister, comme les dépassements de tampon ou les bugs de format pour un programme, ou encore les vulnérabilités menant à des failles XSS\footnote{Cross-site Scripting : Faille de sécurité typiquement présente sur les applications web, elle permet à un attaquant d'injecter du code du côté du client dans des pages webs visiblent par d'autre personne.} ou des injections SQL.\\
   \noindent L'audit de code étant fastidieuse dans certain cas (gros projet, architecture compliqué, etc), l'utilisation d'outils d'analyse de code, comme RATS\footnote{Rought Auditing Tool for Security}, permet de ``degrossir'' le travail, mais cela reste un traitement automatique, un oeil humain reste nécessaire pour ne pas passer à côté de problèmes flagrants.\\
 
-\item \textbf{Fuzzing} : Dans le cas où l'application est dites en ``boite noire'' (pas d'accès au code directement), on utilise une analyse de code qui vise à analyser le comportement d'une application en fonction des données, plus ou moins aléatoires, que l'on injecte en entrée.
+\item \textbf{Fuzzing} : Dans le cas où l'application est dites en ``boite noire'' (pas d'accès au code directement), on utilise une analyse de code qui vise à analyser le comportement d'une application en fonction des données, plus ou moins aléatoires, que l'on injecte en entrée.\\\\
   
 \end{itemize}
 
-Nous avons donc 
+Nous avons donc recensé un large choix d'outils pour réaliser à bien un audit de configuration, donc certain spécialement centré sur l'humain puisqu'il reste la partie la plus incertaine du système de sécurité.\\
   
 \section{Pentest}
 
 \textit{Cette partie se verra être plus détaillé techniquement, étant l'activité sur laquelle l'auteur s'est concentré sur le stage. Elle utilisera des données appartenant à la société et par conséquent confidentielle. Il sera fait ici une explication des outils et méthodes utilisées pour expliquer le test d'intrusion, ou pentest.}\\
 
-Les tests d'intrusion sont une pratique d'audit technique. On peut diviser les tests d'intrusion en trois catégories principales : les tests boîte blanche, les tests boîte grise et les tests dits boîte noire. Leur différenciation se situe dans les informations dont on dispose au départ du pentest. Les pentests dit "en boîte noire" se déroulent sans informations de différentes nature qu'elles soient (Identifiants, informations de réseaux, de nom, etc). Pour les tests en "boîte blanche", là on dispose de toute les informations nécessaire à la réalisation du test. Cela peut aller du jeu d'identifiant, jusqu'au plan du réseau ou encore la liste des employés. Tout informations peut être exploité.\\
+Comme nous l'avons vu précédemment, les tests d'intrusion sont une pratique courante des audits techniques. On peut diviser les tests d'intrusion en trois catégories principales : les tests boîte blanche, les tests boîte grise et les tests dits boîte noire. Leur différenciation se situe dans les informations dont on dispose au départ du pentest. Les pentests dit "en boîte noire" se déroulent sans informations de différentes nature qu'elles soient (identifiants, informations de réseaux, de nom, etc). Pour les tests en "boîte blanche", là on dispose de toute les informations nécessaire à la réalisation du test. Cela peut aller du jeu d'identifiant, jusqu'au plan du réseau ou encore la liste des employés. Tout informations peut être exploité.\\
+
 \noindent Le test en ``boite grise'' quant à lui est un mélange entre les deux précédents. Lors de la réalisation de ces tests, l'auditeur dispose de quelques informations concernant le système audité. En général, on lui fournit un compte utilisateur. Ceci lui permet de se placer dans la peau d'un "utilisateur normal". 
 
-Nous allons parler dans un premier temps des nuances entre les différents type de tests, des pratiques mais aussi des outils utilisés.
-
-
+Nous allons donc voir plus précisement les nuances entre les différents type de tests, les pratiques mais aussi les outils utilisés.
 
 \subsection{Boîte noire, dans la peau d'un pirate}
 
 Dans le contexte Boîte noir (ou Black Box), le pentester se met réellement dans la peau d’un attaquant externe et commence son test d’intrusion en ayant le moins d’information possible sur sa cible (sa cible étant alors l’entreprise ayant demandé un pentest). En effet, lorsqu’un asseyant débute son attaque, il ne dispose pas (ou rarement) de la cartographie complète du SI, de la liste des serveurs avec leurs IP, etc. Le contexte Black Box vise donc à trouver et à démontrer la présence d’un plan d’action exploitable par une personne externe permettant de prendre le contrôle du système d’information ou de mettre la main sur certaines informations. En commençant avec très peu d’informations, le pentester doit chercher depuis l’extérieur comment s’introduire dans le système cible, il adopte alors la méthodologie et le comportement qu’aurait un pirate réel. 
 
-Dans cette configuration là, le pentester va d'abord opérer ce que l'on appelle une reconnaissance de la victime via un procédé de ``social engineering'', afin de récuperer un maximum d'information sur la victime.  
+Dans cette configuration là, le pentester va d'abord opérer ce que l'on appelle une reconnaissance de la victime via un procédé de ``social engineering'', afin de récuperer un maximum d'information sur la victime. Ici, internet est une source d'informations très appréciable du fait de la facilité d'accès des informations.  
 
 \subsection{Boîte blanche, dans la peau d'un technicien}
 
