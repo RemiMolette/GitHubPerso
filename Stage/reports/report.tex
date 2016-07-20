@@ -367,10 +367,11 @@ La sécurité informatique est aujourd'hui quelque chose de très important dans
 
 \chapter{En terme de technique}
 
-En terme de technique, nous allons voir ce qu'il existe en terme d'outillage pour réaliser les audits techniques (et tous ses variantes) et plus particulièrement les tests d'intrusions, mais aussi la méthodologie qui y est liée. Mais commençons par distinguer tests d'intrusion et audit de sécurité, car il s'agit de deux notions qui peuvent paraître similaires au premier abord mais dont les cadres respectifs ne correspondent pas forcément.
-Un audit de sécurité est plus large qu'un test d'intrusion, lors d'un audit de sécurité, nous allons vérifier la sécurité organisationelle, le PRA/PCA (Plan de Reprise et Plan de Continuité d'Activité), DLP (Data Loss Prevention), la conformité par rapport aux exigences d'une norme (exemple : PCI DSS) ou un référentiel, et également procéder à un audit des configurations, audit de code, et enfin effectuer une analyse des risques (EBIOS, MEHARI, MARION).
+En terme de technique, nous allons voir ce qu'il existe en terme d'outillage pour réaliser les audits techniques (et tous ses variantes) et plus particulièrement les tests d'intrusions, mais aussi la méthodologie qui y est liée.\\
+Mais commençons par distinguer tests d'intrusion et audit de sécurité, car il s'agit de deux notions qui peuvent paraître similaires au premier abord mais dont les cadres respectifs ne correspondent pas forcément.
+Un audit de sécurité est plus large qu'un test d'intrusion, lors d'un audit de sécurité, nous allons vérifier la sécurité organisationelle, le PRA/PCA (Plan de Reprise et Plan de Continuité d'Activité), DLP (Data Loss Prevention), la conformité par rapport aux exigences d'une norme (exemple : PCI DSS) ou un référentiel, et également procéder à un audit des configurations, audit de code, et enfin effectuer une analyse des risques (EBIOS, MEHARI, MARION).\\
 
-L’audit de sécurité s’effectue en plusieurs phases, dont le test d’intrusion. Parmi les autres phases, on peut donc trouver la correspondance orale avec les membres du SI\footnote{Système d'Information}, DSI\footnote{Directeur des Systèmes d'Information}, RSSI\footnote{Responsable de la sécurité des systèmes d'information} et membres de l’équipe technique, l’audit de configuration des services, serveurs, composants réseaux, etc., également l’audit de code pour les applications utilisées, déployées, voir développées en interne par l’entreprise cliente.
+L’audit de sécurité s’effectue en plusieurs phases, dont le test d’intrusion. Parmi les autres phases, on peut donc trouver la correspondance orale avec les membres du SI\footnote{Système d'Information}, DSI\footnote{Directeur des Systèmes d'Information}, RSSI\footnote{Responsable de la sécurité des systèmes d'information} et membres de l’équipe technique, l’audit de configuration des services, serveurs, composants réseaux, etc., également l’audit de code pour les applications utilisées, déployées, voir développées en interne par l’entreprise cliente.\\
 
 Parmi les référentiels souvent utilisés pour l’audit de sécurité, on retrouve la norme ISO 27 000 / ISO 27 001, le référentiel général de sécurité de l’ANSSI, le référentiel COBIT et dans d’autres contextes, les normes de type SOX, PCI-DSS, etc. Nous verrons cela plus précisément dans une partie dédiée plus loin.
 
@@ -387,37 +388,42 @@ L'audit se déroule en fonction d'un référentiel, dont voici les principaux po
   \item La base documentaire du SI.
   \item La réglementations propre à l'entreprise, comme notamment la nécessite de chiffrer les périphériques de stockage.
   \item Les textes de loi.
-    \item Les documents de référence dans le domane de la sécurité informatique.
+    \item Les documents de référence dans le domane de la sécurité informatique.\\
 \end{itemize}
 
-Nous avons vu dans la partie précédente ce qui nosu avait ammené à repenser notre façon de sécuriser nos systèmes d'informations et la mise en place d'audit de sécurité peut être une méthode pour prévenir des risques. Ce couteau suisse de la sécurité informatique peut être utlisé pour différent aspect :
+Nous avons vu dans la partie précédente ce qui nous avait ammené à repenser notre façon de sécuriser nos systèmes d'informations et la mise en place d'audit de sécurité peut être une méthode pour prévenir des risques. Ce couteau suisse de la sécurité informatique peut être utlisé pour différent aspect :
 
 \begin{itemize}
 \item Réagir à une attaque, en analysant le vecteur d'attaque, la cible, etc.
 \item Se faire une idée de ce que l'auditeur possède en terme de sécurité.
 \item Tester la mise en place effective de la politique de sécurité du système d'information.
 \item Ter un nouvel équipement et son intégration dans le réseau de l'audité.
-\item Evaluer l'évolution de la sécurité, mais cela implique la réalisation d'audit périodique.
+\item Evaluer l'évolution de la sécurité, mais cela implique la réalisation d'audit périodique.\\
 \end{itemize}
 
 Mans dans tout les cas, il a pour but de vérifier la sécurité et pour cela, il fournit en résultat un rapport d'audit. Celui-ci est constitué de la liste exhaustive des vulnérabilités recensées par l'auditeur sur le système analysé. Il contient également une liste de recommandations permettant de supprier les vulnérabilités trouvées.
 
-Nous allons voir les différentes pratiques qui existent et qui sont généralement utilisées pour arriver à produire un audit de sécurité :
+Nous allons voir les différentes pratiques qui existent et qui sont généralement utilisées pour arriver à produire un audit de sécurité :\\
 
 \begin{itemize}
-  \item Interviews : Les interviews sont réalisées sur toutes les personnes ayant un rôle dans la mise en place ou l'utilisation de la sécurité informatique sur SI.
+
+\item \textbf{Interviews} : Les interviews sont réalisées sur toutes les personnes ayant un rôle dans la mise en place ou l'utilisation de la sécurité informatique sur SI.
 On y retrouve généralement le DSI, le ou les RSSI, les différents administrateurs, les utilisateurs du système d'informations peut importe leur rôle dans l'entreprise, ainsi que tout autre rôle ayant un lien avec la sécurité.\\
-Un des aspects importants sur le rôle de l'auditeur lors des interviews est faire preuve de diplomatie afin de pas faire sentir à l'audité le moindre jugement du fait qu'il est interrogé sur son travail, ce qui pourrait fausser les résultats et rendre l'audit moins pertinant.
+Un des aspects importants sur le rôle de l'auditeur lors des interviews est faire preuve de diplomatie afin de pas faire sentir à l'audité le moindre jugement du fait qu'il est interrogé sur son travail, ce qui pourrait fausser les résultats et rendre l'audit moins pertinant.\\
 
-\item Test d'intrusion : Les tests d'intrusions sont une partie importante des audits techniques. Ils permettent de vérifier un système de sécurité d'une manière très perspicasse puisque que l'auditeur se positionne en tant qu'un pirate afin de vérifier le plus précisement possible l'état de la sécurité informatique du système d'information.\\
-  Mais tout ceci sera expliqué dans une partie dédié aux tests d'intrusions, du fait qu'il y ai eu une plus grande activité dessus lors du stage.
+\item \textbf{Test d'intrusion} : Les tests d'intrusions sont une partie importante des audits techniques. Ils permettent de vérifier un système de sécurité d'une manière très perspicasse puisque que l'auditeur se positionne en tant qu'un attaquant afin de vérifier le plus précisement possible l'état de la sécurité informatique du système d'information.\\
+  Mais tout ceci sera expliqué dans une partie dédié aux tests d'intrusions, du fait qu'il y ai eu une plus grande activité dessus lors du stage.\\
 
-\item Relevé de configuration : Dans cette partie, il s'agit d'analyser, le plus pertinnament possible, les composants du système d'information. On se focalisera tout particulièrement sur les configurations utilisées. A la suite de cette observation, la liste des vulnérabilités est dégagée en comparant le relé à des cinfigurations réputées sécurisées et à des ensembles de failles connues.
+\item \textbf{Relevé de configuration} : Dans cette partie, il s'agit d'analyser, le plus pertinnament possible, les composants du système d'information. On se focalisera tout particulièrement sur les configurations utilisées. A la suite de cette observation, la liste des vulnérabilités est dégagée en comparant le relé à des cinfigurations réputées sécurisées et à des ensembles de failles connues. Beaucoup d'aspects peuvent être contrôlés durant un relevé de configuration, allant de l'architecture du SI aux applications, en passant par les hôtes (clients et serveurs).\\
 
-  \item Audit de code : 
+\item \textbf{Audit de code} : Lors d'un audit de code, le but est de comprendre le code source, pour en analyser la sécurité et déceler les eventuels problèmes qui peuvent exister, comme les dépassements de tampon ou les bugs de format pour un programme, ou encore les vulnérabilités menant à des failles XSS\footnote{Cross-site Scripting : Faille de sécurité typiquement présente sur les applications web, elle permet à un attaquant d'injecter du code du côté du client dans des pages webs visiblent par d'autre personne.} ou des injections SQL.\\
+  \noindent L'audit de code étant fastidieuse dans certain cas (gros projet, architecture compliqué, etc), l'utilisation d'outils d'analyse de code, comme RATS\footnote{Rought Auditing Tool for Security}, permet de ``degrossir'' le travail, mais cela reste un traitement automatique, un oeil humain reste nécessaire pour ne pas passer à côté de problèmes flagrants.\\
 
+\item \textbf{Fuzzing} : Dans le cas où l'application est dites en ``boite noire'' (pas d'accès au code directement), on utilise une analyse de code qui vise à analyser le comportement d'une application en fonction des données, plus ou moins aléatoires, que l'on injecte en entrée.
+  
 \end{itemize}
 
+Nous avons donc 
   
 \section{Pentest}
 
