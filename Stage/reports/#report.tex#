@@ -13,9 +13,6 @@
 
 \documentclass[a4paper]{memoir}
 
-\setcounter{tocdepth}{3}
-\setcounter{secnumdepth}{3}
-
 %%%%% Packages %%%%%
 \usepackage{lmodern}
 \usepackage{palatino}
@@ -31,12 +28,11 @@
 \usepackage{xspace,varioref}
 \usepackage{hyperref}
 
-
 \usepackage[dvipsnames]{xcolor}
 \usepackage{graphicx}
- 
+
 \usepackage{appendix}
-\usepackage{makeidx} 
+\usepackage{makeidx}
 
 %% custom style %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -238,75 +234,28 @@ Evolution depuis les années 2000
 Ce travail a été effectué dans le cadre du stage de fin d'étude qui se déroulait sur une période de six mois, au sein de la société Sopra Steria.
 Les informations qui suivent sont une présentation de la société, de son organisation ainsi que son activité.
 
-\section*{Historique}
-
-En janvier 2015, Sopra et Steria ont choisi de s’unir dans le groupe Sopra Steria. Ils disposent d’une histoire et d’une culture proches : pionniers des services informatiques, ils se sont bâtis sur une forte culture entrepreneuriale et d’innovation.
-
-Grâce à de très fortes complémentarités des métiers et des géographies, le nouvel ensemble propose l’une des offres les plus complètes du marché, répondant au mieux aux attentes du client. 
-
-\begin{figure}[!ht]
-    \center
-    \includegraphics[width=1\textwidth]{./images/sopra1.png}
-    \caption{Fusion Sopra \& Steria}
-    \label{Sopra+Steria}
-\end{figure}
-
-Sopra Steria est un leader européen de la transformation numérique. Le groupe se positionne dans le top 4
-en France et dans le top 10 en Europe des sociétés de services IT (source Gartner).
-
-\begin{figure}[!ht]
-    \center
-    \includegraphics[width=1\textwidth]{./images/sopra2.png}
-    \caption{Valorisation}
-    \label{Sopra+Steria+chiffre}
-\end{figure}
-
-Avec un CA de près de 3,4 Milliards d’euros (proforma) en 2014, Sopra Steria est localisé dans plus de 20
-pays à travers le monde, principalement en Europe.
-La révolution du numérique est une source d’opportunités pour nos clients dans leur transformation et la
-fourniture de service de qualité tout en maîtrisant cet écosystème IT ainsi que son coût.
-
-\begin{figure}[!ht]
-    \center
-    \includegraphics[width=1\textwidth]{./images/sopra3.png}
-    \caption{Révolution numérique}
-    \label{Révolution numérique}
-\end{figure}
-
-Sopra Steria intervient sur l’ensemble des prestations d’accompagnement dans la réalisation de vos projets.
-Nos savoir-faire forment une chaîne continue de valeur ajoutée, du conseil Métier / SI à la gestion
-d’infrastructure en passant par l’intégration de système et la gestion d’applications.
-
-\newpage
-
 \section*{Activité}
 
-L’ensemble de l’expertise de Sopra Steria est regroupé au sein de la filiale Solutions \& Cyber dans une BU
-CyberSécurité sous la responsabilité d’Ilhame CHOUKRANI.
+\textbf{A retravailler}\\
 
-\begin{figure}[!ht]
-    \center
-    \includegraphics[width=1\textwidth]{./images/sopra4.png}
-    \caption{Organigrame}
-    \label{Organigrame}
-\end{figure}
+Sopra Steria est un leader européen de la transformation numérique. Le groupe se positionne dans le top quatre en France et dans le top dix en Europe des soéciétés de services IT (source Gartner).\\
+Avec un chiffre d'affaire annuel de 3,6 Milliards d'euros en 2015 et plus de 37 000 colaboraters Sopra steria est localisée dans plus de vingts pays à travers le monde, principalement en Europe.\\
 
-Cette Business Unit compte : 
+La révolution du numérique est une source d'opportunités pour nos clients dans leur transformtion et la fourniture de service de qualité tout en maitrisant cet écosystème IT ainsi que son coût.\\
+Sopra Steria se définit en quatres points :
 
 \begin{itemize}
-\item Plus de 200 consutlants, experts SSI en France ;
-\item 3 Centres de CyberSécurité (France, UK et Singapour) ;
-\item Un budget R\&D d'environ 3,3\% du CA Sécurité.
+    \item Accompagner nos clients dans leur transformation numérique.
+    \item Créer et opérer des services innovants pour faire de ces mutations un atout majeur.
+    \item Gagner en réactivité et flexibilité pour accompagner la coissance et la compétitivité.
+    \item Maîtriser la qualité et les coûts sur les systèmes existants.
 \end{itemize}
 
-Carte d’identité de la BU CyberSécurité et chiffres clés dans le monde :
+A completer
+Introduction de shéma \& explication des divers secteurs
+Focus sur la BU Cyber Sécurité
 
-\begin{figure}[!ht]
-    \center
-    \includegraphics[width=0.8\textwidth]{./images/sopra5.png}
-    \caption{Carte d'identité}
-    \label{ID}
-\end{figure}
+
 
 \cleardoublepage
 \tableofcontents*
@@ -338,6 +287,8 @@ Dans ce mémoire, l'auteur se basera sur sa vision de la sécurité informatique
 Dans cette partie, nous aborderons la question du ``Pourquoi'', en expliquant les origines de la sécurité informatique, les idées reçues sur cette discipline aussi nouvelle qu'incomprise et pourquoi elle est aujourd'hui estimé comme un aspect primordial, voire obligatoire, dans le développement d'une entreprise.
 
 \noindent Mais si nous devons parler de l'état actuel de la sécurité informatique, il est important de parler de ses origines, nous nous intéresserons donc dans un premier temps au développement de l'informatique lui même en établissant un état de l'art. Pour cela, nous allons expliquer à travers différents moments clé de l'histoire qui ont permit la naissance et le développement de l'informatique tel que nous le connaissons aujourd'hui.\\
+
+\textit{Développement chronologique à revoir, plus raconté}
 
 
 \section{Enigma}
@@ -408,11 +359,13 @@ On y oppose à cette forme de sécurisation, la sécurisation par le risque. Ell
 Nous allons donc voir dans la partie suivante ce dont on dispose pour réaliser la mise en place de toute la sécurité informatique, des outils mais aussi des méthodologies à notre disposition pour être actif et efficient.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\part{Situation technique}
+\part{Situation}
 
-\chapter{Prémices}
+\subsection{Prémices}
 
-La sécurité informatique est aujourd'hui quelque chose de très important dans le développement d'une entreprise, comme nous l'avons vu dans la partie précédente. Nous allons voir dans cette partie ce qu'il éxiste en terme d'outils et de prestation dans le monde de la sécurité informatique, en se penchant d'avantage sur la mise en oeuvre de test d'intrusion (ou pentest) et sa valeur vis à vis d'un audit de sécurité standard. Nous ferons le lien entre la partie précédente pour voir et constater si l'on est ou pas en mesure de répondre aux menaces en matière d'informatique. Nous verrons aussi par la suite tout ce qui touche au cadre légale et juridique, car, les différentes forme de sécurité (offensive\footnote{Pentest} et défensive\footnote{Audit technique}) doit être cadré pour ne pas nuir à l'audité, ce qui serait contre-productif. On verra également la valeur ajouté des certifications et des normes ISO qui fleurissent actuellement et leurs effets sur les prestations que les entreprises peuvent proposer et pourquoi elles deviennent de plus en plus nécessaire.\\ 
+La sécurité informatique est aujourd'hui quelque chose de très important dans le développement d'une entreprise, comme nous l'avons vu dans la partie précédente. Nous allons voir dans cette partie ce qu'il éxiste en terme d'outils et de prestation dans le monde de la sécurité informatique, en se penchant d'avantage sur la mise en oeuvre de test d'intrusion (ou pentest) et sa valeur vis à vis d'un audit de sécurité standard. Nous ferons le lien entre la partie précédente pour voir et constater si l'on est ou pas en mesure de répondre aux menaces en matière d'informatique. Nous verrons aussi par la suite tout ce qui touche au cadre légale et juridique, car, les différentes forme de sécurité (offensive\footnote{Pentest} et défensive\footnote{Audit technique}) doit être cadré pour ne pas nuir à l'audité, ce qui serait contre-productif. On verra également la valeur ajouté des certifications et des normes ISO qui fleurissent actullement et leurs effets sur les prestations que les entreprises peuvent proposer et pourquoi elles deviennent de plus en plus nécessaire. 
+
+\chapter{En terme de technique}
 
 En terme de technique, nous allons voir ce qu'il existe en terme d'outillage pour réaliser les audits techniques (et ses variantes) et plus particulièrement les tests d'intrusions et les méthodologies qui y sont liées.\\
 Mais commençons par distinguer tests d'intrusion et audit de sécurité, car il s'agit de deux notions qui peuvent paraître similaires au premier abord mais dont les cadres respectifs ne correspondent pas forcément et dont il est important de faire une différence. 
@@ -420,7 +373,8 @@ Un audit de sécurité est plus large qu'un test d'intrusion, lors d'un audit de
 
 Parmi les référentiels souvent utilisés pour l’audit de sécurité, on retrouve la norme ISO 27 000 / ISO 27 001, le référentiel général de sécurité de l’ANSSI, le référentiel COBIT et dans d’autres contextes, les normes de type SOX, PCI-DSS, etc. Nous verrons cela plus précisément dans une partie dédiée prochainement.
 
-\chapter{Audit de sécurité}
+
+\section{Audit de sécurité}
 
 Nous allons donc parler plus précisement de l'Audit de sécurité dans cette partie. L'audit de sécurité d'un système d'information (SI) est une vue à un instant T de tout ou partie du SI, permettant de comparer l'état du SI à un référentiel.
 
@@ -469,29 +423,26 @@ Un des aspects importants sur le rôle de l'auditeur lors des interviews est fai
 
 Nous avons donc recensé un large choix d'outils pour réaliser à bien un audit de configuration, donc certain spécialement centré sur l'humain puisqu'il reste la partie la plus incertaine du système de sécurité.\\
   
-\chapter{Pentest}
+\section{Pentest}
 
-\textit{Cette partie se verra être plus détaillé techniquement, étant l'activité sur laquelle l'auteur s'est concentré sur le stage. Elle utilisera des données anonymisées dont l'auteur du rapport à participé à l'élaboration. Il sera fait ici une explication des outils et méthodes utilisées pour expliquer le test d'intrusion, ou pentest.}\\
+\textit{Cette partie se verra être plus détaillé techniquement, étant l'activité sur laquelle l'auteur s'est concentré sur le stage. Elle utilisera des données appartenant à la société et par conséquent confidentielle. Il sera fait ici une explication des outils et méthodes utilisées pour expliquer le test d'intrusion, ou pentest.}\\
 
-Comme nous l'avons vu précédemment, les tests d'intrusion sont une pratique courante des audits techniques. On peut diviser les tests d'intrusion en trois catégories principales : les tests boîte blanche, les tests boîte grise et les tests dits boîte noire. Leur différenciation se situe dans les informations dont on dispose au départ du pentest. 
+Comme nous l'avons vu précédemment, les tests d'intrusion sont une pratique courante des audits techniques. On peut diviser les tests d'intrusion en trois catégories principales : les tests boîte blanche, les tests boîte grise et les tests dits boîte noire. Leur différenciation se situe dans les informations dont on dispose au départ du pentest. Les pentests dit "en boîte noire" se déroulent sans informations de différentes nature qu'elles soient (identifiants, informations de réseaux, de nom, etc). Pour les tests en "boîte blanche", là on dispose de toute les informations nécessaire à la réalisation du test. Cela peut aller du jeu d'identifiant, jusqu'au plan du réseau ou encore la liste des employés. Tout informations peut être exploité.\\
+
+\noindent Le test en ``boite grise'' quant à lui est un mélange entre les deux précédents. Lors de la réalisation de ces tests, l'auditeur dispose de quelques informations concernant le système audité. En général, on lui fournit un compte utilisateur. Ceci lui permet de se placer dans la peau d'un "utilisateur normal". 
 
 Nous allons donc voir plus précisement les nuances entre les différents type de tests, les pratiques mais aussi les outils utilisés.
 
-\section{Boîte noire, dans la peau d'un pirate}
+\subsection{Boîte noire, dans la peau d'un pirate}
 
 Dans le contexte Boîte noir (ou Black Box), le pentester se met réellement dans la peau d’un attaquant externe et commence son test d’intrusion en ayant le moins d’information possible sur sa cible (sa cible étant alors l’entreprise ayant demandé un pentest). En effet, lorsqu’un asseyant débute son attaque, il ne dispose pas (ou rarement) de la cartographie complète du SI, de la liste des serveurs avec leurs IP, etc. Le contexte Black Box vise donc à trouver et à démontrer la présence d’un plan d’action exploitable par une personne externe permettant de prendre le contrôle du système d’information ou de mettre la main sur certaines informations.
+ 
+\subsubsection{Déroulement d'un pentest}
 
-\subsection{Exemple d'un déroulement de pentest en boîte noire}
-
-Nous allons nous placer dans le contexte d'un pentest en boîte noire, afin d'expliquer de manière complète la procédure et les outils utilisés et prendre comme appuie un client type demandant cette prestation. Le client en question, l'entreprise BlackBox, a demandé comme prestation de réaliser un pentest sur vingt-quatres URL de son parc, sans donner d'informations quant aux identifiants ou à la structure du réseau.\\
-
-En commençant avec très peu d’informations, le pentester doit donc chercher depuis l’extérieur comment s’introduire dans le système cible, il adopte alors la méthodologie et le comportement qu’aurait un pirate réel. 
-Dans cette configuration là, le pentester va d'abord opérer ce que l'on appelle une reconnaissance de la victime via un procédé de ``social engineering'', afin de récuperer un maximum d'information sur la victime. Ici, internet est une source d'informations très appréciable du fait de la facilité d'accès des informations, mais il existe des logiciels spécialisés dans la récolte d'information comme l'excellent Maltego.
-Dans le cas de notre client, cette invesigation n'était pas utile, du fait du nombre d'URL à tester et du laps de temps attribué. Nous avons donc réalisé une prestation de pentest flash, qui consistait à utiliser des outils qui opéraient des traîtements automatisés sur les URLs, afin de ce concentrer sur une analyse plsu fine sur des points qui semblaient plus sensible que d'autre. 
+ En commençant avec très peu d’informations, le pentester doit chercher depuis l’extérieur comment s’introduire dans le système cible, il adopte alors la méthodologie et le comportement qu’aurait un pirate réel. 
 
 
-
-\section{Boîte blanche, dans la peau d'un technicien}
+\subsection{Boîte blanche, dans la peau d'un technicien}
 
  Ici, c’est exactement l’inverse. Le pentesteur travail en proche collaboration avec le DSI, le RSSI et l’équipe technique du système d’information. Le but est alors d’obtenir 100\% des informations sur le système d’information et d’accompagner la DSI/RSSI dans la détection de vulnérabilité. Un des avantages du mode Boîte blanche (ou White Box) est que l’on peut alors détecter des failles de sécurité de façon plus large et que le mode Black Box n’aurait pas permis de déceler, car en se trouvant à l'intérieur du réseau à tester, le testeur aura plus de facilité à trouver ces failles car il connaît non seulement le système, mais il peut avoir accès directement aux ressources dont il a besoin. De plus, le mode White Box s’intègre plus facilement dans le cycle de vie du SI, parfois à chaque stade de son évolution. 
 
@@ -504,14 +455,21 @@ Le testeur peut être en possession de nombreuses informations. Parmi elles, les
 \end{itemize}
 
 
-\section{Boite grise, entre bon et mauvais hackeur}
+\subsection{Boite grise, entre bon et mauvais hackeur}
 
 En général, lors de tests d'intrusion en mode boîte grise, le testeur dispose uniquement d'un couple identifiant - mot de passe. Ceci lui permet notamment de passer l'étape d'authentification.
 
 L'objectif de ce type de test est d'évaluer le niveau de sécurité vis-à-vis d'un "utilisateur normal".
 
+\section{Déroulement pentest}
 
-\chapter{Limitation - lien avec le juridique}
+
+
+
+Dans cette configuration là, le pentester va d'abord opérer ce que l'on appelle une reconnaissance de la victime via un procédé de ``social engineering'', afin de récuperer un maximum d'information sur la victime. Ici, internet est une source d'informations très appréciable du fait de la facilité d'accès des informations. 
+
+
+\section{Limitation - lien avec le juridique}
 
 \textbf{TRANSITION}
 Parmi les référentiels souvent utilisés pour l’audit de sécurité, on retrouve la norme ISO 27 000 / ISO 27 001, le référentiel général de sécurité de l’ANSSI, le référentiel COBIT et dans d’autres contextes, les normes de type SOX, PCI-DSS, etc.
