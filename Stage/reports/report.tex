@@ -383,7 +383,7 @@ On voit donc apparaitre dans les années 80 les réponses aux problèmes informa
 \section{Année 90}
 
 La période des années 90 est la plus intéressante pour le développement de notre mémoire. C'est celle-ci qui marque les plus grandes avancées dans le domaine de l'informatique et de sa sécurité.
-Commençons avec le fait plus marquant de cette période avec la décommissions de l'ARPANet et le transfert de son trafic vers le World Wide Web tel que nous le connaissons aujourd'hui. C'est avec ce transfert que le premier navigateur Web graphique voit le jour : WordlWideWeb. Cette innovation engendrant une croissance exponentielle de la demande pour l'accès public à l'internet. Avec cette explosion de l'internet, les délits se multiplient, comme nettement avec Kevin Mitnick, considéré comme le plus célèbre de tous les pirates, pour s'être introduit dans les systèmes de plusieurs grandes sociétés et avoir volé toute sorte de données allant des informations personnelles de personnes célèbres à plus de 20.000 numéros de cartes de crédit en passant par l'extraction de code source de logiciels propriétaires \\
+Commençons avec le fait plus marquant de cette période avec la dé-commissions de l'ARPANet et le transfert de son trafic vers le World Wide Web tel que nous le connaissons aujourd'hui. C'est avec ce transfert que le premier navigateur Web graphique voit le jour : WordlWideWeb. Cette innovation engendrant une croissance exponentielle de la demande pour l'accès public à l'internet. Avec cette explosion de l'internet, les délits se multiplient, comme nettement avec Kevin Mitnick, considéré comme le plus célèbre de tous les pirates, pour s'être introduit dans les systèmes de plusieurs grandes sociétés et avoir volé toute sorte de données allant des informations personnelles de personnes célèbres à plus de 20.000 numéros de cartes de crédit en passant par l'extraction de code source de logiciels propriétaires \\
 \noindent C'est par la même occasion que le ministre de la justice américaine, Attorney General Janet Reno, en réponse au nombre croissant des brèches de sécurité dans les systèmes du gouvernement fonde le centre de protection de l'infrastructure nationale (ou National Infrastructure Protection Center, NIPC).
 
 
@@ -433,7 +433,7 @@ L'audit se déroule en fonction d'un référentiel, dont voici les principaux po
   \item La base documentaire du SI.
   \item La réglementations propre à l'entreprise, comme notamment la nécessite de chiffrer les périphériques de stockage.
   \item Les textes de loi.
-    \item Les documents de référence dans le domane de la sécurité informatique.\\
+    \item Les documents de référence dans le domaine de la sécurité informatique.\\
 \end{itemize}
 
 Nous avons vu dans la partie précédente ce qui nous avait amené à repenser notre façon de sécuriser nos systèmes d'informations et la mise en place d'audit de sécurité peut être une méthode pour prévenir des risques. Ce couteau suisse de la sécurité informatique peut être utilisé pour différent aspect :
@@ -443,7 +443,7 @@ Nous avons vu dans la partie précédente ce qui nous avait amené à repenser n
 \item Se faire une idée de ce que l'auditeur possède en terme de sécurité.
 \item Tester la mise en place effective de la politique de sécurité du système d'information.
 \item Ter un nouvel équipement et son intégration dans le réseau de l'audité.
-\item Evaluer l'évolution de la sécurité, mais cela implique la réalisation d'audit périodique.\\
+\item Évaluer l'évolution de la sécurité, mais cela implique la réalisation d'audit périodique.\\
 \end{itemize}
 
 Mans dans tous les cas, il a pour but de vérifier la sécurité et pour cela, il fournit en résultat un rapport d'audit. Celui-ci est constitué de la liste exhaustive des vulnérabilités recensées par l'auditeur sur le système analysé. Il contient également une liste de recommandations permettant de supprimer les vulnérabilités trouvées.
@@ -476,25 +476,14 @@ Nous avons donc recensé un large choix d'outils pour réaliser à bien un audit
 
 Comme nous l'avons vu précédemment, les tests d'intrusion sont une pratique courante des audits techniques. On peut diviser les tests d'intrusion en trois catégories principales : les tests boîte blanche, les tests boîte grise et les tests dits boîte noire. Leur différenciation se situe dans les informations dont on dispose au départ du pentest. 
 
-Nous allons donc voir plus précisément les nuances entre les différents type de tests, les pratiques mais aussi les outils utilisés.
+Nous allons donc voir plus précisément les nuances entre les différents type de tests, les pratiques mais aussi les outils utilisés suivant le type de test.\\
 
 \section{Boîte noire, dans la peau d'un pirate}
 
-Dans le contexte Boîte noir (ou Black Box), le pentester se met réellement dans la peau d’un attaquant externe et commence son test d’intrusion en ayant le moins d’information possible sur sa cible (sa cible étant alors l’entreprise ayant demandé un pentest). En effet, lorsqu’un asseyant débute son attaque, il ne dispose pas (ou rarement) de la cartographie complète du SI, de la liste des serveurs avec leurs IP, etc. Le contexte Black Box vise donc à trouver et à démontrer la présence d’un plan d’action exploitable par une personne externe permettant de prendre le contrôle du système d’information ou de mettre la main sur certaines informations.
+Dans le contexte Boîte noir (ou Black Box), le pentester se met réellement dans la peau d’un attaquant externe et commence son test d’intrusion en ayant le moins d’information possible sur sa cible (sa cible étant alors l'entreprise ayant demandé un pentest). En effet, lorsqu’un asseyant débute son attaque, il ne dispose pas (ou rarement) de la cartographie complète du SI, de la liste des serveurs avec leurs IP, etc. Le contexte Black Box vise donc à trouver et à démontrer la présence d’un plan d’action exploitable par une personne externe permettant de prendre le contrôle du système d’information ou de mettre la main sur certaines informations
+Dans ce genre de prestation, l'attaquant se place dans une position de pirate, pour tester au mieux le système de sécurité et avoir des résultats bien plus concret qu'un test en ayant toute les informations, car celle-ci ne sont pas forcement disponible et exploitable dans la réalité.
 
-\subsection{Exemple d'un déroulement de pentest en boîte noire}
-
-Nous allons nous placer dans le contexte d'un pentest en boîte noire, afin d'expliquer de manière complète la procédure et les outils utilisés et prendre comme appuie un client type demandant cette prestation. Le client en question, l'entreprise BlackBox, a demandé comme prestation de réaliser un pentest sur vingt-quatre URL de son parc, sans donner d'informations quant aux identifiants ou à la structure du réseau.\\
-
-En commençant avec très peu d’informations, le pentester doit donc chercher depuis l’extérieur comment s’introduire dans le système cible, il adopte alors la méthodologie et le comportement qu’aurait un pirate réel. 
-Dans cette configuration-là, le pentester va d'abord opérer ce que l'on appelle une reconnaissance de la victime via un procédé de ``social engineering'', afin de récupérer un maximum d'information sur la victime. Ici, internet est une source d'informations très appréciable du fait de la facilité d'accès des informations, mais il existe des logiciels spécialisés dans la récolte d'information comme l'excellent Maltego.
-Dans le cas de notre client, cette investigation n'était pas utile, du fait du nombre d'URL à tester et du laps de temps attribué. Nous avons donc réalisé une prestation de pentest flash, qui consistait à utiliser des outils qui opéraient des traitements automatisés sur les URL, afin de se concentrer sur une analyse plus fine, notamment sur des points qui semblaient plus sensible.
-
-\textit{TODO : listing matériel, capture décran anonymisé}   
-
-
-
-\section{Boîte blanche, dans la peau d'un technicien}
+\section{Boîte blanche, dans la peau d'un technicien} 
 
  Ici, c’est exactement l’inverse. Le pentesteur travail en proche collaboration avec le DSI, le RSSI et l’équipe technique du système d’information. Le but est alors d’obtenir 100\% des informations sur le système d’information et d’accompagner la DSI/RSSI dans la détection de vulnérabilité. Un des avantages du mode Boîte blanche (ou White Box) est que l’on peut alors détecter des failles de sécurité de façon plus large et que le mode Black Box n’aurait pas permis de déceler, car en se trouvant à l'intérieur du réseau à tester, le testeur aura plus de facilité à trouver ces failles car il connaît non seulement le système, mais il peut avoir accès directement aux ressources dont il a besoin. De plus, le mode White Box s’intègre plus facilement dans le cycle de vie du SI, parfois à chaque stade de son évolution. 
 
@@ -506,29 +495,124 @@ Le testeur peut être en possession de nombreuses informations. Parmi elles, les
    \item Code source de l'application ;
 \end{itemize}
 
-
 \section{Boite grise, entre bon et mauvais hackeur}
 
 En général, lors de tests d'intrusion en mode boîte grise, le testeur dispose uniquement d'un couple identifiant - mot de passe. Ceci lui permet notamment de passer l'étape d'authentification.
-
 L'objectif de ce type de test est d'évaluer le niveau de sécurité vis-à-vis d'un "utilisateur normal".
 
+Le pentesteur débute son test d’intrusion avec un nombre limité d’information, en étant par exemple dans la peau d’un utilisateur du SI. En tant que membre du service comptabilité par exemple, il débutera avec un poste dans le LAN, un compte utilisateur valide, l’accès à certaines applications métiers. En revanche il n’aura pas la permission de demander la version du serveur de mail à la DSI, information que la DSI ne donnerait pas à un utilisateur lambda.
 
-\chapter{Limitation - lien avec le juridique}
+Ici, on peut donc simuler les méfaits que peut causer un utilisateur au système de sa propre entreprise à partir d’une position précise dans le système d’information. Le mode Grey Box ne se résume pas qu’à ce contexte, on peut par exemple également imaginer un point de départ qui serait la possession par l’attaquant de compte d’utilisateur ayant quitté l’entreprise mais qui serait toujours valide dans le système d’information cible.
 
-\textbf{TRANSITION}
-Parmi les référentiels souvent utilisés pour l’audit de sécurité, on retrouve la norme ISO 27 000 / ISO 27 001, le référentiel général de sécurité de l’ANSSI, le référentiel COBIT et dans d’autres contextes, les normes de type SOX, PCI-DSS, etc.
+
+\section{Méthodologie}
+
+A la suite de la présentation des différents type de pentest, nous allons parler des méthodologies qui y sont attachées.
+Elles sont importantes dans la mesure où le milieu de la sécurité évolue vite, les techniques et les technologies changent sans cesse, des vulnérabilités paraissent quotidiennement et leurs patchs également. Les méthodologies permettent d’apporter un cadre fixe sur le déroulement d’un test d’intrusion.
+Une methodologile peut être appréciable quant un pentesteur fait face à un système d’information, voire à plusieurs, car chaque système, service, port et IP peut cacher une vulnérabilité, voire un chemin tout tracé jusqu’à la prise de contrôle du système. Cela multiplié par la très grande quantité de tests à effectuer en fonction du service ou de la technologie utilisée, il est facile de se perdre. Une méthodologie cadrée et fixée permet alors de suivre une trame et ainsi d’organiser son test d’intrusion afin que celui-ci soit le plus complet possible.
+Enfin, d'un point de vue professionnel, l'utilisation de méthodologies communes, de normes et de référentiels communs permettra à plusieurs pentesteurs de travailler en équipe. Cela va permettre de facilité et de rendre plus efficace le travail au sein d’une équipe de pentest. Également, le rapport généré et la documentation sera faite en suivant une trame connue : celle de la méthodologie utilisée.
+Et pour terminer, une méthodologie va permettre de ne rien oublier durant son test d’intrusion et de faire en sorte que celui-ci soit le plus complet possible. Elle fait office de chemin à suivre, facilitant l’organisation du pentesteur.\\
+
+En terme de méthodologie existante, en voici quelques une :
+
+\begin{itemize}
+\item PTES (Penetration Testing Execution Standard) : Le Penetration Testing Execution Standard est un standard créé afin de proposer aux entreprises et aux équipes de sécurité une trame commune et un cadre (scope) pour l’exécution d’un pentest. Créé en 2009, une version 2 est en cours de rédaction. 
+Cette méthodologie est découpée en 7 parties qui sont :
+
+	\begin{enumerate}	
+		\item Pré-engagement : Chaque test d’intrusion débute avant tout par une négociation, une compréhension des besoins clients et pour finir une contractualisation qui met tout cela en forme sur papier.
+		\item Comprendre la collecte de renseignements/d’informations : Ici, on va chercher à lister un maximum d’informations à propos du SI testé (cartographie, etc.).
+		\item Threat Modeling : On va ici chercher à dresser une liste des menaces pour l’entreprise.
+		\item Analyse des vulnérabilité : On va ici se servir des informations collectées précédemment pour analyser les systèmes, le personnel et les processus en place à la recherche de failles de sécurité et de vulnérabilités exploitables.
+		\item Exploitation : Ici, on va chercher à tester les vulnérabilités trouvées dans la phase précédente et à avancer dans l’intrusion du systèmes d’information.
+		\item Post-Exploitation : Ici, comme un vrai attaquant, on va chercher à s'implanter durablement dans le système, ou encore effacer ses traces.
+		\item Reporting : Dans cette dernière partie, nous allons exposer le déroulement du test de pénétration et les résultats. \\
+	\end{enumerate}
+
+\item OWASP Testing Guide : L’OWASP (Open Web Application Security Project) est un organisme qui œuvre pour la diffusion de pratique de sécurité et d’outils de sécurité autour des applications web.  Il s’agit d’une méthodologie très complète destiné aux pentesteurs et également aux développeurs d’applications et sites web, au delà d’une méthodologie de pentest, il s’agit plus d’un listing de différents points de sécurité à vérifier à la fois quand on est développeur d’une application web, mais également quand on est pentesteur.\\
+
+\item OSSTM (Open Source Security Testing Methodology Manual) : L’Open Source Security Testing Methodology Manual est un document édité et publié par l’ISECOM (Institute for Security and Open Methodologies), un organisme à but non lucratif résidant en Espagne. Ce document accompagne les audits de sécurité et est utilisable dans les contextes suivant : 
+	
+	
+\begin{enumerate}
+\item Ethical Hacking
+\item Test d'intrusion
+\item Evaluation de sécurité
+\item Evaluation des vulnérabilités
+\item Red Team\footnote{Test d'intrusion réalisé sur une longue période, comme étant une prestation réalisé par une équipe "Attaque"}
+\item Blue Team (côté défense de la Red Team)\\
+\end{enumerate}
+\end{itemize}
+
+\newpage
+
+\section{Exemple d'un déroulement de pentest}
+
+Nous allons nous placer dans le contexte d'un pentest en boîte noire, afin d'expliquer de manière complète la procédure et les outils utilisés et prendre comme appuie un client type demandant cette prestation. Le client en question, l'entreprise BlackBox, a demandé comme prestation de réaliser un pentest sur vingt-quatres URLs de son parc, sans donner d'informations quant aux identifiants ou à la structure du réseau.\\
+
+En commençant avec très peu d’informations, le pentester doit donc chercher depuis l'extérieur comment s’introduire dans le système cible, il adopte alors la méthodologie et le comportement qu’aurait un pirate réel. 
+Dans cette configuration-là, le pentester va d'abord opérer ce que l'on appelle une reconnaissance de la victime via un procédé de ``social engineering'', afin de récupérer un maximum d'information sur la victime. Ici, internet est une source d'informations très appréciable du fait de la facilité d'accès des informations, mais il existe des logiciels spécialisés dans la récolte d'information comme l'excellent logiciel Maltego.\\
+
+Dans le cas de notre client, cette investigation n'était pas utile, du fait du nombre d'URL à tester et du laps de temps attribué. Nous avons donc réalisé une prestation de pentest flash, qui consistait à utiliser des outils qui opéraient des traitements automatisés sur les URL, afin de se concentrer sur une analyse plus fine, notamment sur des points qui semblaient plus sensible.\\
+En terme d'outils automatisé, nous avons utilisé plusieurs scanner de vulnérabilités, dans le but de croiser les résultats et mieux traiter les faux positifs. Chaque scanner de vulnérabilité opère donc sur une URL, avec une sortie de rapport automatisée, le tout récupérer dans une arborescence adapté. Nous avons utilisé quatre outils de scanner, à savoir Nikto, Openvass, Acunatix et TestSSL (seulement dans certains cas). Ces outils permettent de vérifier de manière large le contenu des URLs et de faciliter le travail des auditeurs.
+Dans notre cas, les résultats ont laisser apparaitre des problèmes de divers nature, allant de l'oublie de protection dans l'en-tête des requêtes HTML, jusqu'à la fuite d'information personnel accessible à tous, en passant par des vulnérabilités XSS\footnote{Cross Site Scripting : Faille permettant à un attaquant de dérouler du code malicieux du coté du client. Ex : <script>alert(1)</script> sera interprété et affichera "1" sur l'écran de la victime.}
+Dans l'image suivante, on peux voir le rendu d'un rapport de de test automatisé, présentant les résultats de recherche sur l'URL :
+
+\begin{figure}[!ht]
+    \center
+    \includegraphics[width=0.8\textwidth]{./images/rapport1.png}
+    \caption{Résultat de rapport}
+    \label{ID}
+\end{figure}
+
+Après exploitation des résultats, on réalise donc un rapport de test d'intrusion, résumant les résultats de chaque URL. Chaque rapport de pentest comporte les mêmes sections rappelant les principaux point de réglementation et ce qui avait été décidé lors des réunions d'ouvertures. 
+On établie un résumé des failles trouvées sur l'ensemble du test d'intrusion, afin d'avoir un première vue d'ensemble. Dans notre cas , l’audit a permis d’identifier 146 vulnérabilités dont 56 critiques, 24 modérées et 66 faibles dont la répartition par serveurs est la suivante :
+
+\begin{figure}[!ht]
+    \center
+    \includegraphics[width=0.8\textwidth]{./images/resume.png}
+    \caption{Résumé des failles}
+    \label{ID}
+\end{figure}
+
+Par la suite, chaque vulnérabilité est traitée individuellement sous cette forme dans la suite du rapport : 
+
+\begin{figure}[!ht]
+    \center
+    \includegraphics[width=0.8\textwidth]{./images/tableau1.png}
+    \caption{Présentation d'une vulnérabilité}
+    \label{ID}
+\end{figure}
+
+Ce format sera utilisé pour toutes les vulnérabilités du rapport, il comporte une zone pour décrire les vulnérabilités, résumé le classement CVS attaché, une note de criticité (en fonction des paramètre CVS du dessus), une explication des risques, une recommandation pour corriger la vulnérabilité et enfin une preuve de la vulnérabilité.\\
+
+Au terme de cette prestation, nous faisons donc un rendu des résultats, sous forme d'un rapport résumant la prestation, ce qui avait été définie avec le client et une présentation afin d''appuyer nos résultats lors de la présentation des rendus finaux.
+Les rapports ne sont pas conservés par l'auditeur du fait de l'importance des informations qui y sont recensées.
+
+\chapter{Limitations}
+
+\textbf{Encadrement}
+Parmi les référentiels souvent utilisés pour l’audit de sécurité, on retrouve la norme ISO 27 000 / ISO 27 001, le référentiel général de sécurité de l’ANSSI, le référentiel COBIT et dans d’autres contextes, les normes de type SOX, PCI-DSS, etc.\\
 
 Certification à revoir\\
 
-  
-Différent outils à disposition
-(scanneur, automatisation de rapport, travail à la mano)
+En terme d'audit technique, les réglementations sont très strictes. Tout un procédé juridique est nécessaire ainsi qu'un encadrement stricte. Pour cela, il est nécessaire de remplir une convention d'audit entre le commanditaire, l'auditeur et l'audité. Cette convention doit contenir au minimum : 
 
-\chapter{Constat, ce qu'il faut modifier, pour faire le lien avec la partie d'après}
+	\begin{itemize}
+		\item Autorisation de l'audité,
+		\item Périmètre et modalités du test (IP, URL, dates, horaires...),
+		\item Obligation de moyens,
+		\item Limites du test,
+		\item Information sur les risques spécifiques au test,
+		\item Clause d'éthique de l'auditeur,
+		\item Clause de confidentialité imposée à l'auditeur et ses employés,
+		\item Clause interdisant à l'auditeur de faire intervenir des personnes ayant été condamnées pour fraude informatique,
+		\item Clause relative à la propriété intellectuelle,
+		\item Livrables et présentation des résultats.
+\end{itemize}
 
-Décalage
-On fournit un travail mais cen 'est pas forcément suivi par tout le monde 
+
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \part{Evolution}
@@ -538,11 +622,13 @@ On fournit un travail mais cen 'est pas forcément suivi par tout le monde
 Bug bounty, Uberisation du modèle -> court circuit -> Twitter a corrigé plsu de 360 failles critiques 
 Prestation moins chère, on fournit des pages, plus du service
 Iso, certification
+Ouverture ANSSI pour le pentest > site internet 
 
 \chapter{Pour le grand public ?}
 
 Nombreuses presations
 Ouverture
+Pas très ouvert
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -559,8 +645,6 @@ Plein de logiciel libre (mentalité du monde du piratage informatique)
 \addcontentsline{toc}{part}{Annexes}
 \appendix
 
-\chapter{Aux cas où}
-
 \chapter{Pour la forme}
 
 
@@ -574,4 +658,4 @@ Plein de logiciel libre (mentalité du monde du piratage informatique)
 
 \end{document}
 
-
+%https://www.donneespersonnelles.fr/il-est-desormais-legal-dattaquer-des-sites-web-pour-tester-leur-securite
