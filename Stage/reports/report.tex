@@ -547,7 +547,7 @@ Dans cette configuration-là, le pentester va d'abord opérer ce que l'on appell
 
 Dans le cas de notre client, cette investigation n'était pas utile, du fait du nombre d'URL à tester et du laps de temps attribué. Nous avons donc réalisé une prestation de pentest flash, qui consistait à utiliser des outils qui opéraient des traitements automatisés sur les URL, afin de se concentrer sur une analyse plus fine, notamment sur des points qui semblaient plus sensible.\\
 En terme d'outils automatisé, nous avons utilisé plusieurs scanner de vulnérabilités, dans le but de croiser les résultats et mieux traiter les faux positifs. Chaque scanner de vulnérabilité opère donc sur une URL, avec une sortie de rapport automatisée, le tout récupérer dans une arborescence adapté. Nous avons utilisé quatre outils de scanner, à savoir Nikto, Openvass, Acunatix et TestSSL (seulement dans certains cas). Ces outils permettent de vérifier de manière large le contenu des URLs et de faciliter le travail des auditeurs.
-Dans notre cas, les résultats ont laisser apparaitre des problèmes de divers nature, allant de l'oublie de protection dans l'en-tête des requêtes HTML, jusqu'à la fuite d'information personnel accessible à tous, en passant par des vulnérabilités XSS\footnote{Cross Site Scripting : Faille permettant à un attaquant de dérouler du code malicieux du coté du client. Ex : <script>alert(1)</script> sera interprété et affichera "1" sur l'écran de la victime.}
+Dans notre cas, les résultats ont laisser apparaitre des problèmes de divers nature, allant de l'oublie de protection dans l'en-tête des requêtes HTML, jusqu'à la fuite d'information personnel accessible à tous, en passant par des vulnérabilités XSS.\footnote{Cross Site Scripting : Faille permettant à un attaquant de dérouler du code malicieux du coté du client. Ex : <script>alert(1)</script> sera interprété et affichera "1" sur l'écran de la victime.}
 Dans l'image suivante, on peux voir le rendu d'un rapport de de test automatisé, présentant les résultats de recherche sur l'URL :
 
 \begin{figure}[!ht]
@@ -578,12 +578,10 @@ Par la suite, chaque vulnérabilité est traitée individuellement sous cette fo
 
 Ce format sera utilisé pour toutes les vulnérabilités du rapport, il comporte une zone pour décrire les vulnérabilités, résumé le classement CVS attaché, une note de criticité (en fonction des paramètre CVS du dessus), une explication des risques, une recommandation pour corriger la vulnérabilité et enfin une preuve de la vulnérabilité.\\
 
-Au terme de cette prestation, nous faisons donc un rendu des résultats, sous forme d'un rapport résumant la prestation, ce qui avait été définie avec le client et une présentation afin d''appuyer nos résultats lors de la présentation des rendus finaux.
-Les rapports ne sont pas conservés par l'auditeur du fait de l'importance des informations qui y sont recensées.
+Au terme de cette prestation, nous faisons donc un rendu des résultats, sous forme d'un rapport résumant la prestation, ce qui avait été définie avec le client et une présentation afin d'appuyer nos résultats lors de la présentation des rendus finaux.
+Il est important de préciser que les rapports ne sont pas conservés par l'auditeur du fait de l'importance des informations qui y sont recensées.
 
-\chapter{Limitations}
-
-\textbf{Encadrement}
+\chapter{Encadrement}
 
 En terme d'audit technique, les réglementations sont très strictes. Tout un procédé juridique est nécessaire ainsi qu'un encadrement stricte. Pour cela, il est nécessaire de remplir une convention d'audit entre le commanditaire, l'auditeur et l'audité. Cette convention doit contenir au minimum : 
 
@@ -600,48 +598,78 @@ En terme d'audit technique, les réglementations sont très strictes. Tout un pr
 		\item Livrables et présentation des résultats.
 \end{itemize}
 
+Cette convention servira ensuite de preuve et de protection en cas de litige envers l'audité ou tout autre partie. 
 
-Parmi les référentiels souvent utilisés pour l’audit de sécurité, on retrouve la norme ISO 27 000 / ISO 27 001, le référentiel général de sécurité de l’ANSSI, le référentiel COBIT et dans d’autres contextes, les normes de type SOX, PCI-DSS, etc.\\
+On trouve également beaucoup de référentiel pour les audits techniques.
+Ces référentiels sont un recueil de règles, procédures et/ou bonnes pratiques reconnues au plan international et sur lequel l’auditeur pourra s’appuyer pour formuler ses recommandations. 
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \part{Evolution}
 
 \chapter{Technique}
 
-Bug bounty, Uberisation du modèle -> court circuit -> Twitter a corrigé plsu de 360 failles critiques 
-Prestation moins chère, on fournit des pages, plus du service
-Ouverture ANSSI pour le pentest > site internet 
+Suite au développement rapide de l'informatique, les législations et autorités ne sont pas toujours compétente pour faire face à cette monté en puissance, mais surtout, la banalité de l'accès à l'internet.
+C'est dans cette optique là que c'est développé une nouvelle forme de sécurité informatique : les programmes de bug bounty. O
+Mais les legislations et la loie essaye de se mettre à la page, et notamment avec la CNIL\footnote{Commission nationale de l'informatique et des libertés} qui est en train actuellement de se pencher sur le pentest sauvage, cette pratique visant à faire des tests d'intrusions sur des sites lambdas, et ce, sans autorisations préalables. 
 
-Suite au développement rapide de l'informatique, les legislations et autorités ne sont pas toujours compétente pour faire face à cette monté en puissance, mais surtout, la banalité de l'accès à l'internet.
-C'est dans cette optique là que c'est développé une nouvelle forme de sécurité informatique : les programmes de bug bounty.
+On peut voir apparaitre une sorte d'"Uberisation" d'un modèle économique dominé par les sociétés expertes dans le domaine de la sécurité informatique. Ce terme, emprunter à la célèbre compagnie Uber, met en avant le fait de proposer un service permettant de mettre en lien direct professionnel et client grâce à l'utilisation de nouvelle technologie. C'est le cas ici avec l'apparition de plateforme de Bug Bounty qui permet donc d'ouvrir le marché de la sécurité informatique aux utilisateurs du services et de ne plus laisser ce monopole aux sociétés ayant le monopole dans ce domaine.
+Mais nous allons voir tout cela en précision.
+
+\chapter{Bug Bounty}
+
 Un bug bounty est un programme proposé par de nombreux sites web et développeurs de logiciel qui permet à des personnes de recevoir reconnaissance et compensation après avoir reporté des bugs, surtout ceux concernant des exploits et des vulnérabilités. Ces programmes permettent aux développeurs de découvrir et de corriger des bugs avant que le grand public en soit informé, évitant ainsi des abus. 
-Cela permet d'avoir un programme de test beaucoup plus ouvert et performant, les pirates du monde entier peuvent s'attaquer aux sites qui proposent ce genre de programme. Par exemple Twitter en 2015 à corrigé plus de 360 failles critiques.
 
-L'ANSSI de son côté a ouvert le pentest à tout le monde.
+On doit le premier programme de Bug Bounty avec la société Netscape qui, en octobre 1995, a décidé de récompenser les utilisateurs capables d'identifier et de remonter des bugs de sécurité présents dans leur navigateur Netscape Navigator 2.0. Il faudra attendre neuf avant plus tard pour avoir un autre grand nom ouvrir un autre programme : Mozilla en 2004. Ils offraient 500\$ à tous ceux qui trouveront une faille dans Firefox.
+C'est en 2007 que le programme de bug bounty trouvera ses lettres de noblesses avec le concours "Pwn2Own", qui fut lancé en marge de la conférence "CanSecWest". Les participants à ce bug Bounty devaient se pencher sur les failles de sécurité présentes dans les principaux systèmes d'exploitation et navigateur internet du marché, pour espérer toucher leur récompense et acquérir de la notoriété.
+Et en 2010, le géant Google lance son programme, qui concerne tous ses services en ligne et ses outils. 
 
+Depuis 2011, on peut donc dire que les programmes de Bug Bounty se sont banalisées. Fort de ce constat, on remarque même que Facebook, en partenariat avec Microsoft, lança "The Internet Bug Bounty", un programme international récompensant les vulnérabilités découvertes dans tous les principaux outils utilisés pour faire tourner l'internet : Apache, Nginx, Flash, PHP, etc.
 
+Mais quelles sont les intérêts d'un tel programme ?
+Cela permet d'avoir un programme de test beaucoup plus ouvert et performant, les pirates du monde entier peuvent s'attaquer aux sites qui proposent ce genre de programme. Mais ce n'est pas tout. 
+Une entreprise qui souhaite effectuer un audit de ses services se doit de faire appelle à une société qui fait ce genre de prestation, elle accédera alors à un rapport détaillé de son système de sécurité à un instant T. Malheureusement, si cette entreprise désire rester à jours et corriger ses nouvelles failles, elle devra faire de nouveau appel à un audit et cela peut vite s'avérer très chère.
+C'est pour cela qu'avec un programme de bug bounty développé avec rigueur, cette entreprise pourra faire tester son site ou encore ses outils en continu, 24h sur 24 et ce, par des centaines de personnes et pour beaucoup moins chère.
 
-\chapter{Pour le grand public ?}
+Un autre aspect que l'on pourrait souligner sur les vertus du Bug Bounty serai le fait que l'on détourne du marché noir certains hackeur qui s'intéresse au site proposant un tel programme, en leur proposant une rémunération légale pour leur service.
 
-La suite logique de ce développement serait une ouverture vers le grand public. Car c'est celui ci qui reste le plus sensible aux dangers d'internet.
+Il est important de souligner que les programmes de Bug Bounty ne sont pas forcément proposé par des grosses sociétés en lien avec l'informatique. En effet, en 2014, Wester Union a ouvert un programme similaire en proposant des récompenses allant de 500 à 5000\$. United Airlines a suivit le pas en 2015 en proposant des vols gratuits, ainsi que Tesla Motors.
 
+Le développement de ce programme est donc un exemple concret de l'offre et de la demande en terme de sécurité informatique et de ce phénomène d'"Uberisation".
+En effet, un tel développement vise à rendre la sécurité informatique plus accessible et moins couteuse, l'argent étant un facteur limitant dans la sécurisation de système informatique.
+Mais il est important de ce concentrer sur l'évolution de la menace informatique et de son impact.
 
-Nombreuses presations
-Ouverture
-Pas très ouvert
+\chapter{La suite}
+
+La suite logique du développement de la sécurité informatique serait vers le grand public. Celui-ci est en effet le plus sensible aux nouvelles menaces et paradoxalement, le moins averti. 
+Mais le développement de programme de Bug Bounty permet aussi de former de nouveau expert dans le domaine de la sécurité informatique, ce domaine étant encore très jeune.
+Une des pistes d'évolution concernant la sécuritsation informatique serait d'apporter une sensibilisation de ce domaine le plus tôt possible chez les personnes et pourquoi pas aux cours de leur éducation. 
+
+Un point interessant serait d'ouvrir les programmes de Bug Bounty à toujours plus de site afin d'accroitre l'intêret d'un tel programme et de ses retombées.
+On peut bien-sûr pointer du doigts l'encadrement légale de toute ses activités et de leur compléxité d'interprétation. Prennez par exemple la Loi Godfrain (articles 323-1 à 323-7 du Code pénal) ou encore de la Loi de programmation militaire (Article 323-3 du Code pénal) qui introduit la possibilité de tester un logiciel pour s'assurer de sa sécurité (L. 122-6-1 III du CPI), cependant, les jugements rendus récemment ne vont pas en faveur de cette loi, ce qui créer une confusion dans le monde de la sécurité informatique?
+
+Enfin, il est bon de noter qu'il existe de nombreux évènement traitant de la sécurité informatique dans le monde, ne serait-ce qu'avec la BlackHat ou les différents forum de discussion qui se montent dans le monde afin de se faire rencontrer les professionnels et les particuliers. Ces évènements véhiculent une image positive de la sécurité informatique, en faisant passer cela pour un challenge (Pown2Own) ou par des démonstrations impréssionnantes, mais permettent aussi à des néophytes de découvrir ce milieu et d'en ressortir plus sensibilisé sur ce qu'il existe dans le domaine de la sécurité informatique, ce qui reste toujours appréciable de nos jours.
+
+Nous avons donc vu à travers cette partie, les évolutions en terme de sécurité informatique qui ont été apporté ces dernières années. Une démocratisation de plus en plus importante et un accès facilité pour les non-professionnels. Ce qui permet de diminuer aujourd'hui l'impact des nouvelles menaces informatiques qui se renouvellent tout les jours. 
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \chapter*{Conclusion}
 
-La sécurité informatique c'est cool
-C'est super nouveau, soumis a plein de changement
-Plein de logiciel libre (mentalité du monde du piratage informatique)
+Dans ce rapport de fin d'étude, nous avons présenter l'activité au sein de l'entreprise Sopra Steria, en effectuant un état de l'art de ce qu'il existe en terme de sécurité informatique à l'heure actuelle.
+L'état que l'on peut faire de la sécurité informatique actuelle, c'est qu'elle n'est pas prête aux nouvelles menaces ou alors très peu. Ce rapport montre d'où vient cette nécessité de la sécurité informatique et pourquoi elle est encore nécessaire aujourd'hui, voir indispensable.
 
-Dans ce rapport de fin d'étude, j'ai essayer de présenter mon activité au sein de l'entreprise Sopra Steria, en effectuant un état de l'art de ce qu'il existe en terme de sécurité informatique à l'heure actuelle.
-L'état que l'on peut faire c'est que la sécurité informatique a mit du temps pour se mettre au niveau de l'informatique à propement parlé, sans doute dût à une évolution très rapide des technonologies, mais aussi à un accès de plus en plus démocratisé.
+Pour cela, nous avons expliqué les fondements de l'informatique moderne, afin de comprendre son apparition et sa quasi indispensabilité dans notre quotidien. Nous avons aussi vu d'où venait les premières forme de menace informatique et leur but, afin de tenter de comprendre d'où vienne les nouvelles menaces informatique.
+Dans un second temps, après avoir analysé la situation actuelle, une explication des prestations que l'on propose actuellement en terme de sécurité informatique a été faites et détaillé. 
+On remarque donc dans le développement de cette partie, que la sécurité informatique n'évolue pas aussi rapidement que l'informatique lui-même. L'informatique tel que nous le connaissons actuellement est caractérisé par un accès facilité et une utilisation simplifiée, comme avec l'utilisation de l'internet par exemple, autant de chose qui font que son développement est rapide et pas toujours traçable. On peut pointer ici l'apparition de nouvelle menace informatique, comme les "Ransonware"\footnote{Logiciel malveillant qui prend en otage des données personnelles. Pour ce faire, il chiffre des données personnelles puis demande à leur propriétaire d'envoyer de l'argent en échange de la clé qui permettra de les déchiffrer.} ou les campagnes de phishing\footnote{Technique utilisée par des fraudeurs pour obtenir des renseignements personnels dans le but de perpétrer une usurpation d'identité. } qui font encore énormément de dégât du fait de leur développement rapide. 
+Encore une fois, c'est l'utilisateur lambda qui est le plus sensible à ces menaces, mais la démocratisation de la sécurité informatique n'est pas aussi évidente que celle de l'informatique traditionnel. On remarque ici la nécessité de cadrer cette activité, d'un point de vue légale mais aussi morale : a-t-on le droit d'examiner un mail personnel pour s'en assurer le contenu ? Peut on demander à une personne d'avoir un droit de regard sur ses activités pour sa sécurité ? Autant de question qu'il est difficile de résoudre et qui ralentisse l'efficacité de la sécurité informatique.
+Cependant, des sociétés expertes dans ce domaine peuvent proposer des prestations de qualités afin d'endiguer la nouvelle menace de l'informatique grand public. C'est par des prestations d'audit technique et notamment de pentest que l'on est en mesure de sécuriser les systèmes d'informations d'une entreprise par exemple, et ce, en se basant sur des référentiels de sécurité mondiaux.
 
+Mais la sécurité informatique ne passe pas que par les entreprises, nous avons vu que la démocratisation des programmes de Bug Bounty permet d'avoir une méthode de sécurisation moins chère mais tout aussi efficace. Et c'est sur cette aspect là qu'il faudra se concentrer et réfléchir sur des nouvelles forme de sécurisation informatique si l'on veut suivre le développement de l'informatique et de ce qui y touche, notamment des nouvelles menaces.
+
+Il n'est pas idiot de penser que la troisième Guerre Mondiale sera celle de la Cyber-donnée, étant donnée l'importance qu'occupe les systèmes informatiques et les données personnel dans notre vie quotidienne. Et si c'était déjà le cas ? Notons les niveaux de sécurité nationnal déployé par la Corée du Nord ou la Russie par exemple ? 
+Pour le moment, il nous faut se concentrer sur les menaces actuelles, et pour cela il faudra s'y préparer, cela passe par une démocratisation de la sécurisation informatique et plus particulièrement par l'Uberisation d'un modèle trop rigoureux et inadapté à l'évolution rapide de l'informatique.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -649,7 +677,7 @@ L'état que l'on peut faire c'est que la sécurité informatique a mit du temps 
 \addcontentsline{toc}{part}{Annexes}
 \appendix
 
-\chapter{Pour la forme}
+\chapter{Résultat de pentest boite noire}
 
 
 \backmatter%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
